@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+<link rel="stylesheet" type="text/css" href="new 1.css">
+<meta charset="utf-8">
+<title>Cylinder</title>
+<head>
+<script type="text/javascript">
+window.onload = function() {
+document.getElementById("radius").value = '';
+document.getElementById("height").value = '';
+}
+function calc() {
+var radius = document.getElementById("radius").value;
+document.getElementById("radius").value = '';
+var height = document.getElementById("height").value;
+document.getElementById("height").value = '';
+var areaofbase = (Math.PI * radius * radius);
+var circofbase = (Math.PI * radius * 2);
+var surarea = ((circofbase * height) + (areaofbase * 2)).toFixed(2);
+var volume = (areaofbase * height).toFixed(2);
+var work = document.getElementById("work");
+work.innerHTML = ("<br/><p><b>Radius</b>: " + radius + " units <b>Height</b>: " + height + " units</p><br/><p><b>Surface Area</b>: " + surarea + " units</p><p><b>Volume</b>: " + volume + " units<sup>2</sup></p>");
+}
+</script>
+<nav class="navbar navbar-inverse navbar-static-top">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="new 1.html">Calculators</a>
+    </div>
+    <ul class="nav navbar-nav">
+      <li class="active"><a href="cyl.html">Cylinder</a></li>
+      <li><a href="cir.html">Circle</a></li>
+      <li><a href="pyt.html">Pythagorean</a></li>
+	  <li><a href="rec.html">Rec. Prism</a></li>
+	  <li><a href="tri.html">Tri. Prism</a></li>
+    </ul>
+  </div>
+</nav>
+</head>
+<body>
+<div class="jumbotron text-center"><h1>Cylinder</h1></div>
+<div class="col-sm-2"></div>
+<div class="col-sm-8">
+<p class="move2">Radius of Base:</p><p><input type="number" id="radius" autofocus="autofocus" class="thick" placeholder=" Ex. 1, 2, 3 (No Units)"></p>
+<p class="move3">Height of Cylinder:</p><p><input type="number" id="height" class="thick" placeholder=" Ex. 1, 2, 3 (No Units)"></p><br/>
+<p><input type="submit" value="Submit" onclick="calc();" class="submit"></p>
+<p><span id="work"></span></p>
+</div>
+</body>
+</html>

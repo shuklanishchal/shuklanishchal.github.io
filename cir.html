@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+<link rel="stylesheet" type="text/css" href="new 1.css">
+<meta charset="utf-8">
+<title>Circle</title>
+<head>
+<script type="text/javascript">
+window.onload = function() {
+document.getElementById("radius").value = '';
+}
+function calc() {
+var radius = document.getElementById("radius").value;
+document.getElementById("radius").value = '';
+var circ = (Math.PI * radius * 2).toFixed(2);
+var area = (Math.PI * radius * radius).toFixed(2);
+var work = document.getElementById("work");
+work.innerHTML = ("<br/><p><b>Radius</b>: " + radius + " units</p><br/><p><b>Circumference</b>: " + circ + " units</p><p><b>Area</b>: " + area + " units<sup>2</sup></p>");
+}
+</script>
+<nav class="navbar navbar-inverse navbar-static-top">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="new 1.html">Calculators</a>
+    </div>
+    <ul class="nav navbar-nav">
+      <li><a href="cyl.html">Cylinder</a></li>
+      <li class="active"><a href="cir.html">Circle</a></li>
+      <li><a href="pyt.html">Pythagorean</a></li>
+	  <li><a href="rec.html">Rec. Prism</a></li>
+	  <li><a href="tri.html">Tri. Prism</a></li>
+    </ul>
+  </div>
+</nav>
+</head>
+<body>
+<div class="jumbotron text-center"><h1>Circle</h1></div>
+<div class="col-sm-2"></div>
+<div class="col-sm-8">
+<p class="move">Radius:</p><p><input type="number" id="radius" autofocus="autofocus" class="thick" placeholder=" Ex. 1, 2, 3 (No Units)"></p><br/>
+<p><input type="submit" value="Submit" onclick="calc();" class="submit"></p>
+<p><span id="work"></span></p>
+</div>
+</body>
+</html>

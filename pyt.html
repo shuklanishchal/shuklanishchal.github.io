@@ -1,0 +1,48 @@
+ <!DOCTYPE html>
+<html>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+<link rel="stylesheet" type="text/css" href="new 1.css">
+<meta charset="utf-8">
+<title>Pythagorean</title>
+<head>
+<script type="text/javascript">
+window.onload = function() {
+document.getElementById("leg1").value = '';
+document.getElementById("leg2").value = '';
+}
+function calc() {
+var leg1 = document.getElementById("leg1").value;
+document.getElementById("leg1").value = '';
+var leg2 = document.getElementById("leg2").value;
+document.getElementById("leg2").value = '';
+var hyp = (Math.sqrt((leg1*leg1) + (leg2 * leg2))).toFixed(2);
+var work = document.getElementById("work");
+work.innerHTML = ("<p><b>Leg 1</b>: " + leg1 + " units <b>Leg 2</b>: " + leg2 + " units</p><br/><p><b>Hypotenuse</b>: " + hyp + " units</p>");
+}
+</script>
+<nav class="navbar navbar-inverse navbar-static-top">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="new 1.html">Calculators</a>
+    </div>
+    <ul class="nav navbar-nav">
+      <li><a href="cyl.html">Cylinder</a></li>
+      <li><a href="cir.html">Circle</a></li>
+      <li class="active"><a href="pyt.html">Pythagorean</a></li>
+	  <li><a href="rec.html">Rec. Prism</a></li>
+	  <li><a href="tri.html">Tri. Prism</a></li>
+    </ul>
+  </div>
+</nav>
+</head>
+<body>
+<div class="jumbotron text-center"><h1>Pythagorean</h1></div>
+<div class="col-sm-2"></div>
+<div class="col-sm-8">
+<p class="move4">Leg 1:</p><p><input type="number" id="leg1" autofocus="autofocus" class="thick" placeholder=" Ex. 1, 2, 3 (No Units)"></p>
+<p class="move4">Leg 2:</p><p><input type="number" id="leg2" class="thick" placeholder=" Ex. 1, 2, 3 (No Units)"></p><br/>
+<p><input type="submit" value="Submit" onclick="calc();" class="submit"></p><br/>
+<p><span id="work"></span></p>
+</div>
+</body>
+</html>

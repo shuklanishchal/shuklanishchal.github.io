@@ -1,0 +1,72 @@
+.jumbotron {
+	background-color: white;
+}
+html, body {
+	width: 100%;
+	height: 100%;
+	margin: 0px;
+	padding: 0px;
+	overflow-x: hidden;
+}
+li:hover, a:hover {
+	text-decoration: none;
+	-moz-transition:.5s;
+	-webkit-transition:.5s;
+	transition: .5s;
+	background-color: black;
+}
+li {
+	-moz-transition:.5s;
+	-webkit-transition:.5s;
+	transition: .5s;
+}
+nav {
+	border-radius: 0px;
+}
+.submit {
+	-moz-transition:.5s;
+	-webkit-transition:.5s;
+	transition: .5s;
+	background-color: black;
+	background-color: white;
+	color: black;
+	border: 2px solid black;
+	padding-top: 6.25px;
+	padding-bottom: 6.25px;
+	padding-left: 15px;
+	padding-right: 15px;
+}
+.submit:hover {
+	-moz-transition:.5s;
+	-webkit-transition:.5s;
+	transition: .5s;
+	background-color: black;
+	color: white;
+}
+.col-sm-8 {
+	text-align: center;
+}
+.move {
+	margin-right: 114.5px;
+}
+input[type=number] {
+	padding-top: 6.25px;
+	padding-bottom: 6.25px; 
+  -moz-appearance: textfield;
+  appearance: textfield;
+  margin: 0;
+}
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+      -webkit-appearance: none; 
+      margin: 0; 
+}
+.move2 {
+	margin-right: 60px;
+}
+.move3 {
+	margin-right: 47px;
+}
+.move4 {
+	margin-right: 120px;
+}
