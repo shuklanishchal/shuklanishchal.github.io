@@ -41,8 +41,8 @@ work.scrollIntoView();
 <div class="jumbotron text-center"><h1>Pythagorean</h1></div>
 <div class="col-sm-2"></div>
 <div class="col-sm-8" id="stuff">
-<p class="move4">Leg 1:</p><p><input type="tel" id="leg1" autofocus="autofocus" placeholder=" Ex. 1, 2, 3 (No Units)"></p>
-<p class="move4">Leg 2:</p><p><input type="tel" id="leg2" placeholder=" Ex. 1, 2, 3 (No Units)"></p><br/>
+<p class="move4">Leg 1:</p><p><input type="number" pattern="[0-9]*" id="leg1" autofocus="autofocus" placeholder=" Ex. 1, 2, 3 (No Units)"></p>
+<p class="move4">Leg 2:</p><p><input type="number" pattern="[0-9]*" id="leg2" placeholder=" Ex. 1, 2, 3 (No Units)"></p><br/>
 <p><input type="submit" value="Submit" onclick="calc();" class="submit"> <input type="button" value="Reset" onclick="window.location.reload();" class="submit"></p><br/>
 <p><span id="work"></span></p>
 </div>
