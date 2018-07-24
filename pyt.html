@@ -20,6 +20,7 @@ var hyp = (Math.sqrt((leg1*leg1) + (leg2 * leg2))).toFixed(2);
 var work = document.getElementById("work");
 work.innerHTML = ("<p><b>Leg 1</b>: " + leg1 + " units <b>Leg 2</b>: " + leg2 + " units</p><br/><p><b>Hypotenuse</b>: " + hyp + " units</p>");
 }
+work.scrollIntoView();
 </script>
 <nav class="navbar navbar-inverse navbar-static-top">
   <div class="container-fluid">
@@ -42,7 +43,7 @@ work.innerHTML = ("<p><b>Leg 1</b>: " + leg1 + " units <b>Leg 2</b>: " + leg2 + 
 <div class="col-sm-8" id="stuff">
 <p class="move4">Leg 1:</p><p><input type="number" id="leg1" autofocus="autofocus" placeholder=" Ex. 1, 2, 3 (No Units)"></p>
 <p class="move4">Leg 2:</p><p><input type="number" id="leg2" placeholder=" Ex. 1, 2, 3 (No Units)"></p><br/>
-<p><input type="submit" value="Submit" onclick="calc();" class="submit"></p><br/>
+<p><input type="submit" value="Submit" onclick="calc();" class="submit"> <input type="button" value="Reset" onclick="window.location.reload();" class="submit"></p><br/>
 <p><span id="work"></span></p>
 </div>
 <div class="col-sm-2"></div>

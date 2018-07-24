@@ -22,6 +22,7 @@ var surarea = ((circofbase * height) + (areaofbase * 2)).toFixed(2);
 var volume = (areaofbase * height).toFixed(2);
 var work = document.getElementById("work");
 work.innerHTML = ("<br/><p><b>Radius</b>: " + radius + " units <b>Height</b>: " + height + " units</p><br/><p><b>Surface Area</b>: " + surarea + " units</p><p><b>Volume</b>: " + volume + " units<sup>2</sup></p>");
+work.scrollIntoView();
 }
 </script>
 <nav class="navbar navbar-inverse navbar-static-top">
@@ -45,7 +46,7 @@ work.innerHTML = ("<br/><p><b>Radius</b>: " + radius + " units <b>Height</b>: " 
 <div class="col-sm-8" id="stuff">
 <p class="move2">Radius of Base:</p><p><input type="number" id="radius" autofocus="autofocus" placeholder=" Ex. 1, 2, 3 (No Units)"></p>
 <p class="move3">Height of Cylinder:</p><p><input type="number" id="height" placeholder=" Ex. 1, 2, 3 (No Units)"></p><br/>
-<p><input type="submit" value="Submit" onclick="calc();" class="submit"></p>
+<p><input type="submit" value="Submit" onclick="calc();" class="submit"> <input type="button" value="Reset" onclick="window.location.reload();" class="submit"></p>
 <p><span id="work"></span></p>
 </div>
 <div class="col-sm-2"></div>

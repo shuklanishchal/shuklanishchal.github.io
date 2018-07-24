@@ -17,6 +17,7 @@ var circ = (Math.PI * radius * 2).toFixed(2);
 var area = (Math.PI * radius * radius).toFixed(2);
 var work = document.getElementById("work");
 work.innerHTML = ("<br/><p><b>Radius</b>: " + radius + " units</p><br/><p><b>Circumference</b>: " + circ + " units</p><p><b>Area</b>: " + area + " units<sup>2</sup></p>");
+work.scrollIntoView();
 }
 </script>
 <nav class="navbar navbar-inverse navbar-static-top">
@@ -39,7 +40,7 @@ work.innerHTML = ("<br/><p><b>Radius</b>: " + radius + " units</p><br/><p><b>Cir
 <div class="col-sm-2"></div>
 <div class="col-sm-8" id="stuff">
 <p class="move">Radius:</p><p><input type="number" id="radius" autofocus="autofocus" placeholder=" Ex. 1, 2, 3 (No Units)"></p><br/>
-<p><input type="submit" value="Submit" onclick="calc();" class="submit"></p>
+<p><input type="submit" value="Submit" onclick="calc();" class="submit"> <input type="button" value="Reset" onclick="window.location.reload();" class="submit"></p>
 <p><span id="work"></span></p>
 </div>
 </body>
