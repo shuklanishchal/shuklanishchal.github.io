@@ -81,3 +81,7 @@ background-color: white;
 -moz-transition: none;
 -webkit-transition: none;
 }
+input[type='number'],
+textarea {
+  font-size: 16px;
+}
