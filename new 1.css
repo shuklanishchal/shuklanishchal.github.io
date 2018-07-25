@@ -23,11 +23,7 @@ li {
 nav {
 	border-radius: 0px;
 }
-.submit {
-	-moz-transition:.5s;
-	-webkit-transition:.5s;
-	transition: .5s;
-	background-color: black;
+.reset {
 	background-color: white;
 	color: black;
 	border: 2px solid black;
@@ -36,12 +32,14 @@ nav {
 	padding-left: 15px;
 	padding-right: 15px;
 }
-.submit:hover {
-	-moz-transition:.5s;
-	-webkit-transition:.5s;
-	transition: .5s;
+.submit {
 	background-color: black;
 	color: white;
+	border: 2px solid black;
+	padding-top: 6.25px;
+	padding-bottom: 6.25px;
+	padding-left: 15px;
+	padding-right: 15px;
 }
 #stuff {
 	text-align: center;
