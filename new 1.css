@@ -47,15 +47,15 @@ nav {
 .move {
 	margin-right: 114.5px;
 }
-input[type=tel] {
+input[type=number] {
 	padding-top: 6.25px;
 	padding-bottom: 6.25px; 
   -moz-appearance: textfield;
   appearance: textfield;
   margin: 0;
 }
-input[type=tel]::-webkit-inner-spin-button, 
-input[type=tel]::-webkit-outer-spin-button { 
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
       -webkit-appearance: none; 
       margin: 0; 
 }
@@ -79,7 +79,7 @@ background-color: white;
 -moz-transition: none;
 -webkit-transition: none;
 }
-input[type='tel'],
+input[type='number'],
 select:focus,
 textarea {
   font-size: 16px;
