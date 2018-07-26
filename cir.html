@@ -11,6 +11,11 @@ window.onload = function() {
 document.getElementById("radius").value = '';
 document.getElementById("radius").scrollIntoView();
 }
+function submit(e) {
+	if(e && e.keyCode == 13) {
+	calc();
+	}
+}
 function isNumberKey(evt){
     var charCode = (evt.which) ? evt.which : event.keyCode
     if (charCode > 31 && (charCode != 46 &&(charCode < 48 || charCode > 57)))
@@ -43,6 +48,7 @@ work.scrollIntoView();
 </nav>
 </head>
 <body>
+<div onKeyPress="submit(event)" />
 <div class="jumbotron text-center"><h1>Circle</h1></div>
 <div class="col-sm-2"></div>
 <div class="col-sm-8" id="stuff">
