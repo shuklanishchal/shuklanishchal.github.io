@@ -15,6 +15,9 @@ function submit(e) {
 	if(e && e.keyCode == 13) {
 	calc();
 	}
+  if(e && e.keyCode == 106) {
+    return (document.getElementById('radius') + ".");
+  }
 }
 function isNumberKey(evt){
     var charCode = (evt.which) ? evt.which : event.keyCode
