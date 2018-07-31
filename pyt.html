@@ -11,6 +11,13 @@ window.onload = function() {
 document.getElementById("leg1").value = '';
 document.getElementById("leg2").value = '';
 document.getElementById("leg1").scrollIntoView();
+var iOS = !!navigator.platform && /iPad|iPhone|iPod/.test(navigator.platform);
+if(iOS) {
+  document.getElementById('ios').style = "display: ''";
+}
+else {
+  document.getElementById('ios').style = "display: none";
+}
 }
 function submit(e) {
 	if(e && e.keyCode == 13) {
@@ -33,6 +40,14 @@ var work = document.getElementById("work");
 work.innerHTML = ("<p><b>Leg 1</b>: " + leg1 + " units <b>Leg 2</b>: " + leg2 + " units</p><br/><p><b>Hypotenuse</b>: " + hyp + " units</p>");
 work.scrollIntoView();
 }
+function dot() {
+  document.getElementById('leg1').value = document.getElementById('leg1').value + '.'
+  document.getElementById('leg1').focus();
+}
+function dot2() {
+  document.getElementById('leg2').value = document.getElementById('leg2').value + '.'
+  document.getElementById('leg2').focus();
+}
 </script>
 <nav class="navbar navbar-inverse navbar-static-top">
   <div class="container-fluid">
@@ -54,8 +69,10 @@ work.scrollIntoView();
 <div class="jumbotron text-center"><h1>Pythagorean</h1></div>
 <div class="col-sm-2"></div>
 <div class="col-sm-8" id="stuff">
-<p class="move4">Leg 1:</p><p><input type="number" id="leg1" autofocus="autofocus" placeholder=" Ex. 1, 2, 3 (No Units)" onkeypress=" return isNumberKey(event)"></p>
-<p class="move4">Leg 2:</p><p><input type="number" id="leg2" placeholder=" Ex. 1, 2, 3 (No Units)" onkeypress=" return isNumberKey(event)"></p><br/>
+<p class="move4">Leg 1:</p><p><input type="text" pattern="[0-9]*" id="leg1" autofocus="autofocus" placeholder=" Ex. 1, 2, 3 (No Units)" onkeypress=" return isNumberKey(event)"></p>
+<p id='ios'><input type="button" value="Add Decimal" onclick="dot()" class="reset"><br/></p>
+<p class="move4">Leg 2:</p><p><input type="text" pattern="[0-9]*" id="leg2" placeholder=" Ex. 1, 2, 3 (No Units)" onkeypress=" return isNumberKey(event)"></p><br/>
+<p id='ios'><input type="button" value="Add Decimal" onclick="dot2()" class="reset"><br/></p>
 <p><input type="button" value="Reset" onclick="window.location.reload();" class="reset"> <input type="submit" value="Submit" onclick="calc();" class="submit"></p><br/>
 <p><span id="work"></span></p>
 </div>
