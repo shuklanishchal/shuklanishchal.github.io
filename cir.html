@@ -34,6 +34,13 @@ var work = document.getElementById("work");
 work.innerHTML = ("<br/><p><b>Radius</b>: " + radius + " units</p><br/><p><b>Circumference</b>: " + circ + " units</p><p><b>Area</b>: " + area + " units<sup>2</sup></p>");
 work.scrollIntoView();
 }
+document.getElementById("putDecimal").onkeypress = function(evt) {
+  evt = evt || window.event;
+  var charCode = (typeof evt.which == "undefined") ? evt.keyCode : evt.which;
+  if (charCode == 106) {
+    document.getElementById('radius').value = document.getElementById('radius').value + ".";
+  }
+}
 </script>
 <nav class="navbar navbar-inverse navbar-static-top">
   <div class="container-fluid">
@@ -53,9 +60,10 @@ work.scrollIntoView();
 <body>
 <div onKeyPress="submit(event)" />
 <div class="jumbotron text-center"><h1>Circle</h1></div>
+<div id="putDecimal"></div>
 <div class="col-sm-2"></div>
 <div class="col-sm-8" id="stuff">
-<p class="move">Radius:</p><p><input type="number" pattern="[0-9]*" step="0.0001" id="radius" autofocus="autofocus" placeholder=" Ex. 1, 2, 3 (No Units)" onkeypress=" if(event.keyCode == 106) {return '.';} return isNumberKey(event)"></p><br/>
+<p class="move">Radius:</p><p><input type="tel" step="0.0001" id="radius" autofocus="autofocus" placeholder=" Ex. 1, 2, 3 (No Units)" onkeypress=" if(event.keyCode == 106) {return '.';} return isNumberKey(event)"></p><br/>
 <p><input type="button" value="Reset" onclick="window.location.reload();" class="reset"> <input type="submit" value="Submit" onclick="calc();" class="submit"></p>
 <p><span id="work"></span></p>
 </div>
