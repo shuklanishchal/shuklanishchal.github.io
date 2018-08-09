@@ -4,7 +4,7 @@
 <link rel="stylesheet" type="text/css" href="new 1.css">
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<noscript>
+<div id="hide">
   <div class="jumbotron text-center">
     <h1>This Browser Does Not Support JavaScript.</h1>
   </div>
@@ -12,11 +12,12 @@
   <div class="col-sm-8">
     <h2 style="text-align: center">Please exit or allow JavaScript in your browser and refresh.</h2>
   </div>
-</noscript>
+</div>
 <div id="show" style="display: none">
   <script type="text/javascript">
   window.onload = function() {
     document.getElementById('show').style = "display: '';";
+    document.getElementById('hide').style="display: none;";
   }
   </script>
 <title>Calculators</title>
