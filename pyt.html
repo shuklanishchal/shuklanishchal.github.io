@@ -15,14 +15,14 @@ var iOS = !!navigator.platform && /iPad|iPhone|iPod/.test(navigator.platform);
 if(iOS) {
   document.getElementById('ios').style = "display: ''";
   document.getElementById('ios2').style = "display: ''";
-  document.getElementById('ios3').type = "text";
-  document.getElementById('ios4').type = "text";
+  document.getElementById('leg1').type = "text";
+  document.getElementById('leg2').type = "text";
 }
 else {
   document.getElementById('ios').style = "display: none";
   document.getElementById('ios2').style = "display: none";
-  document.getElementById('ios3').type = "number";
-  document.getElementById('ios4').type = "number";
+  document.getElementById('leg1').type = "number";
+  document.getElementById('leg2').type = "number";
 }
 }
 function submit(e) {
