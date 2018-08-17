@@ -15,10 +15,14 @@ var iOS = !!navigator.platform && /iPad|iPhone|iPod/.test(navigator.platform);
 if(iOS) {
   document.getElementById('ios').style = "display: ''";
   document.getElementById('ios2').style = "display: ''";
+  document.getElementById('ios3').type = "text";
+  document.getElementById('ios4').type = "text";
 }
 else {
   document.getElementById('ios').style = "display: none";
   document.getElementById('ios2').style = "display: none";
+  document.getElementById('ios3').type = "number";
+  document.getElementById('ios4').type = "number";
 }
 }
 function submit(e) {
@@ -74,9 +78,9 @@ function dot2() {
 <div class="jumbotron text-center"><h1>Cylinder</h1></div>
 <div class="col-sm-2"></div>
 <div class="col-sm-8" id="stuff">
-<p class="move2">Radius of Base:</p><p><input type="text" pattern="[0-9]*" id="radius" autofocus="autofocus" placeholder=" Ex. 1, 2, 3 (No Units)" onkeypress=" return isNumberKey(event)"></p>
+<p class="move2">Radius of Base:</p><p id="ios3"><input type="text" pattern="[0-9]*" id="radius" autofocus="autofocus" placeholder=" Ex. 1, 2, 3 (No Units)" onkeypress=" return isNumberKey(event)"></p>
 <p id='ios'><input type="button" value="Add Decimal" onclick="dot()" class="reset"><br/></p>
-<p class="move3">Height of Cylinder:</p><p><input type="text" pattern="[0-9]*" id="height" placeholder=" Ex. 1, 2, 3 (No Units)" onkeypress=" return isNumberKey(event)"></p><br/>
+<p class="move3">Height of Cylinder:</p><p id="ios4"><input type="text" pattern="[0-9]*" id="height" placeholder=" Ex. 1, 2, 3 (No Units)" onkeypress=" return isNumberKey(event)"></p><br/>
 <p id='ios2'><input type="button" value="Add Decimal" onclick="dot2()" class="reset"><br/></p>
 <p><input type="button" value="Reset" onclick="window.location.reload();" class="reset"> <input type="submit" value="Submit" onclick="calc();" class="submit"></p>
 <p><span id="work"></span></p>
