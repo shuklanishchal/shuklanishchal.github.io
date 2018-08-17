@@ -11,7 +11,7 @@ window.onload = function() {
 document.getElementById("length").value = '';
 document.getElementById("width").value = '';
 document.getElementById("height").value = '';
-document.getElementById("length").scrollIntoView();
+document.getElementById("scroll").scrollIntoView();
 var iOS = !!navigator.platform && /iPad|iPhone|iPod/.test(navigator.platform);
 if(iOS) {
   document.getElementById('ios').style = "display: ''";
@@ -86,7 +86,7 @@ function dot3() {
 </head>
 <body>
 <div onKeyPress="submit(event)" />
-<div class="jumbotron text-center"><h1>Tri. Prism</h1></div>
+<div class="jumbotron text-center"><h1 id="scroll">Tri. Prism</h1></div>
 <div class="col-sm-2"></div>
 <div class="col-sm-8" id="stuff">
 <p class="move4">Length:</p><p id="ios4"><input type="text" pattern="[0-9]*" id="length" autofocus="autofocus" placeholder=" Ex. 1, 2, 3 (No Units)" onkeypress=" return isNumberKey(event)"></p>

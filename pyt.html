@@ -10,7 +10,7 @@
 window.onload = function() {
 document.getElementById("leg1").value = '';
 document.getElementById("leg2").value = '';
-document.getElementById("leg1").scrollIntoView();
+document.getElementById("scroll").scrollIntoView();
 var iOS = !!navigator.platform && /iPad|iPhone|iPod/.test(navigator.platform);
 if(iOS) {
   document.getElementById('ios').style = "display: ''";
@@ -72,7 +72,7 @@ function dot2() {
 </head>
 <body>
 <div onKeyPress="submit(event)" />
-<div class="jumbotron text-center"><h1>Pythagorean</h1></div>
+<div class="jumbotron text-center"><h1 id="scroll">Pythagorean</h1></div>
 <div class="col-sm-2"></div>
 <div class="col-sm-8" id="stuff">
 <p class="move4">Leg 1:</p><p id="ios3"><input type="text" pattern="[0-9]*" id="leg1" autofocus="autofocus" placeholder=" Ex. 1, 2, 3 (No Units)" onkeypress=" return isNumberKey(event)"></p>

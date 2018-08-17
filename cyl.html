@@ -10,7 +10,7 @@
 window.onload = function() {
 document.getElementById("radius").value = '';
 document.getElementById("height").value = '';
-document.getElementById("radius").scrollIntoView();
+document.getElementById("scroll").scrollIntoView();
 var iOS = !!navigator.platform && /iPad|iPhone|iPod/.test(navigator.platform);
 if(iOS) {
   document.getElementById('ios').style = "display: ''";
@@ -75,7 +75,7 @@ function dot2() {
 </head>
 <body>
 <div onKeyPress="submit(event)" />
-<div class="jumbotron text-center"><h1>Cylinder</h1></div>
+<div class="jumbotron text-center"><h1 id="scroll">Cylinder</h1></div>
 <div class="col-sm-2"></div>
 <div class="col-sm-8" id="stuff">
 <p class="move2">Radius of Base:</p><p id="ios3"><input type="text" pattern="[0-9]*" id="radius" autofocus="autofocus" placeholder=" Ex. 1, 2, 3 (No Units)" onkeypress=" return isNumberKey(event)"></p>

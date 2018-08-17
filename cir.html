@@ -9,7 +9,7 @@
 <script type="text/javascript">
 window.onload = function() {
 document.getElementById("radius").value = '';
-document.getElementById("radius").scrollIntoView();
+document.getElementById("scroll").scrollIntoView();
 var iOS = !!navigator.platform && /iPad|iPhone|iPod/.test(navigator.platform);
 if(iOS) {
   document.getElementById('ios').type = "text";
@@ -62,7 +62,7 @@ function dot() {
 </head>
 <body>
 <div onKeyPress="submit(event)" />
-<div class="jumbotron text-center"><h1>Circle</h1></div>
+<div class="jumbotron text-center"><h1 id="scroll">Circle</h1></div>
 <div class="col-sm-2"></div>
 <div class="col-sm-8" id="stuff">
 <p class="move">Radius: </p>
