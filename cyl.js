@@ -11,7 +11,6 @@ class Cylinder extends React.Component {
         var volume = (baseArea * height).toFixed(2);
         var solution = document.getElementById('solution');
         solution.innerHTML = '<p><b>Radius</b>: ' + radius + ' units</p><p><b>Height</b>: ' + height + ' units</p><br/><p><b>Surface Area</b>: ' + surarea + ' units<sup>2</sup></p><p><b>Volume</b>: ' + volume + ' units<sup>3</sup></p>';
-        document.getElementById('radius').focus();
         document.getElementById('goto').scrollIntoView({behavior: 'smooth'});
     }
     clear() {
@@ -33,7 +32,6 @@ class Cylinder extends React.Component {
         var volume = (baseArea * height).toFixed(2);
         var solution = document.getElementById('solution');
         solution.innerHTML = '<p><b>Radius</b>: ' + radius + ' units</p><p><b>Height</b>: ' + height + ' units</p><br/><p><b>Surface Area</b>: ' + surarea + ' units<sup>2</sup></p><p><b>Volume</b>: ' + volume + ' units<sup>3</sup></p>';
-        document.getElementById('radius').focus();
         document.getElementById('goto').scrollIntoView({behavior: 'smooth'});
         }
     }

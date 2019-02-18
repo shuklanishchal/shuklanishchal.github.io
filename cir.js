@@ -9,7 +9,6 @@ class Circle extends React.Component {
         var area = (Math.PI * radius * radius).toFixed(2);
         var solution = document.getElementById('solution');
         solution.innerHTML = '<p><b>Radius</b>: ' + radius + ' units</p><br/><p><b>Circumference</b>: ' + circ + ' units</p><p><b>Area</b>: ' + area + ' units<sup>2</sup></p>';
-        document.getElementById('radius').focus();
         document.getElementById('goto').scrollIntoView({behavior: 'smooth'});
     }
     clear() {
@@ -26,7 +25,6 @@ class Circle extends React.Component {
         var area = (Math.PI * radius * radius).toFixed(2);
         var solution = document.getElementById('solution');
         solution.innerHTML = '<p><b>Radius</b>: ' + radius + ' units</p><br/><p><b>Circumference</b>: ' + circ + ' units</p><p><b>Area</b>: ' + area + ' units<sup>2</sup></p>';
-        document.getElementById('radius').focus();
         document.getElementById('goto').scrollIntoView({behavior: 'smooth'});
         }
     }

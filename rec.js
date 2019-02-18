@@ -13,7 +13,6 @@ class Rectangle extends React.Component {
         var volume = (length * width * height);
         var solution = document.getElementById('solution');
         solution.innerHTML = '<p><b>Length</b>: ' + length + ' units</p><p><b>Width</b>: ' + width + ' units</p><p><b>Height</b>: ' + height + '<br/><p><b>Surface Area</b>: ' + surarea + ' units<sup>2</sup></p><p><b>Volume</b>: ' + volume + ' units<sup>3</sup></p>';
-        document.getElementById('length').focus();
         document.getElementById('goto').scrollIntoView({behavior: 'smooth'});
     }
     clear() {
@@ -36,7 +35,6 @@ class Rectangle extends React.Component {
             var volume = (length * width * height);
             var solution = document.getElementById('solution');
             solution.innerHTML = '<p><b>Length</b>: ' + length + ' units</p><p><b>Width</b>: ' + width + ' units</p><p><b>Height</b>: ' + height + ' units</p><br/><p><b>Surface Area</b>: ' + surarea + ' units<sup>2</sup></p><p><b>Volume</b>: ' + volume + ' units<sup>3</sup></p>';
-            document.getElementById('length').focus();
             document.getElementById('goto').scrollIntoView({behavior: 'smooth'});
         }
     }
