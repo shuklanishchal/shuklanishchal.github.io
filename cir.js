@@ -29,7 +29,7 @@ class Circle extends React.Component {
         }
     }
     onChange(e){
-        const re = /^(0|[1-9]\d*)$/;
+        const re = /^\d*\.?\d*$/;
         if (!re.test(e.key)) {
            e.preventDefault();
         }
