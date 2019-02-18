@@ -5,6 +5,8 @@ class Cylinder extends React.Component {
     solution() {
         var radius = document.getElementById('radius').value;
         document.getElementById('radius').value = '';
+        var height = document.getElementById('height').value;
+        document.getElementById('height').value = '';
         var baseArea = (Math.PI * radius * radius);
         var baseCirc = (Math.PI * radius * 2);
         var surarea = ((baseCirc * height) + (baseArea * 2)).toFixed(2);
