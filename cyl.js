@@ -35,6 +35,7 @@ class Cylinder extends React.Component {
         var solution = document.getElementById('solution');
         solution.innerHTML = '<p><b>Radius</b>: ' + radius + ' units</p><p><b>Height</b>: ' + height + ' units</p><br/><p><b>Surface Area</b>: ' + surarea + ' units<sup>2</sup></p><p><b>Volume</b>: ' + volume + ' units<sup>3</sup></p>';
         document.getElementById('goto').scrollIntoView({behavior: 'smooth'});
+        document.getElementById('radius').focus();
         }
     }
     onChange(e){
@@ -45,14 +46,14 @@ class Cylinder extends React.Component {
     }
     render() {
         return (
-            <div Style='text-align: center'>
-            <p Style='margin-right: 75px;'><b>Radius of Base</b>:</p>
-            <p><input onKeyPress={this.onChange} Style='border: 1px solid black; background-color: white; padding-top: 6.25px; padding-bottom: 6.25px; font-size: 16px;' type='number' pattern='[0-9]*' id='radius' placeholder=" Ex. 1, 2, 3 (No Units)"/></p>
-            <p Style='margin-right: 55px'><b>Height of Cylinder</b>:</p>
-            <p id='goto'><input onKeyPress={this.onChange} Style='border: 1px solid black; background-color: white; padding-top: 6.25px; padding-bottom: 6.25px; font-size: 16px;' type='number' pattern='[0-9]*' id='height' placeholder=" Ex. 1, 2, 3 (No Units)" onKeyDown={this.handleKeyPress}/></p><br/>
-            <p Style='margin-left: 32px'><input Style='background-color: white; border: 2px solid black; padding-left: 15px; padding-right: 15px; padding-top: 6.25px; padding-bottom: 6.25px; background-color: white; color: black' type='button' value='Clear' onClick={this.clear} /> <input Style='background-color: white; border: 2px solid black; padding-left: 15px; padding-right: 15px; padding-top: 6.25px; padding-bottom: 6.25px; background-color: black; color: white' type='button' value='Submit' onClick={this.solution} /></p><br/>
+            <table align='center'>
+            <tr><td Style='float: left'><p><b>Radius of Base</b>:</p></td></tr>
+            <tr><td><p><input onKeyPress={this.onChange} Style='border: 1px solid black; background-color: white; padding-top: 6.25px; padding-bottom: 6.25px; font-size: 16px;' type='number' pattern='[0-9]*' id='radius' placeholder=" Ex. 1, 2, 3 (No Units)"/></p></td></tr>
+            <tr><td Style='float: left'><p><b>Height of Cylinder</b>:</p></td></tr>
+            <tr id='goto'><td><p><input onKeyPress={this.onChange} Style='border: 1px solid black; background-color: white; padding-top: 6.25px; padding-bottom: 6.25px; font-size: 16px;' type='number' pattern='[0-9]*' id='height' placeholder=" Ex. 1, 2, 3 (No Units)" onKeyDown={this.handleKeyPress}/></p></td></tr><br/>
+            <tr><td Style='float: right'><p><input Style='background-color: white; border: 2px solid black; padding-left: 15px; padding-right: 15px; padding-top: 6.25px; padding-bottom: 6.25px; background-color: white; color: black' type='button' value='Clear' onClick={this.clear} /> <input Style='background-color: white; border: 2px solid black; padding-left: 15px; padding-right: 15px; padding-top: 6.25px; padding-bottom: 6.25px; background-color: black; color: white' type='button' value='Submit' onClick={this.solution} /></p></td></tr><br/>
             <div id='solution'></div>
-            </div>
+            </table>
         );
     }
 }

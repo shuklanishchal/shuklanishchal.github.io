@@ -50,16 +50,16 @@ class Triangle extends React.Component {
     }
     render() {
         return (
-            <div Style='text-align: center'>
-            <p Style='margin-right: 128px;'><b>Length</b>:</p>
-            <p><input onKeyPress={this.onChange} Style='border: 1px solid black; background-color: white; padding-top: 6.25px; padding-bottom: 6.25px; font-size: 16px;' type='number' pattern='[0-9]*' id='length' placeholder=" Ex. 1, 2, 3 (No Units)"/></p>
-            <p Style='margin-right: 138px'><b>Width</b>:</p>
-            <p id='goto'><input onKeyPress={this.onChange} Style='border: 1px solid black; background-color: white; padding-top: 6.25px; padding-bottom: 6.25px; font-size: 16px;' type='number' pattern='[0-9]*' id='width' placeholder=" Ex. 1, 2, 3 (No Units)" onKeyDown={this.handleKeyPress}/></p>
-            <p Style='margin-right: 132px'><b>Height</b>:</p>
-            <p id='goto'><input onKeyPress={this.onChange} Style='border: 1px solid black; background-color: white; padding-top: 6.25px; padding-bottom: 6.25px; font-size: 16px;' type='number' pattern='[0-9]*' id='height' placeholder=" Ex. 1, 2, 3 (No Units)" onKeyDown={this.handleKeyPress}/></p><br/>
-            <p Style='margin-left: 32px'><input Style='background-color: white; border: 2px solid black; padding-left: 15px; padding-right: 15px; padding-top: 6.25px; padding-bottom: 6.25px; background-color: white; color: black' type='button' value='Clear' onClick={this.clear} /> <input Style='background-color: white; border: 2px solid black; padding-left: 15px; padding-right: 15px; padding-top: 6.25px; padding-bottom: 6.25px; background-color: black; color: white' type='button' value='Submit' onClick={this.solution} /></p><br/>
+            <table align='center'>
+            <tr><td Style='float: left'><p><b>Length</b>:</p></td></tr>
+            <tr><td><p><input onKeyPress={this.onChange} Style='border: 1px solid black; background-color: white; padding-top: 6.25px; padding-bottom: 6.25px; font-size: 16px;' type='number' pattern='[0-9]*' id='length' placeholder=" Ex. 1, 2, 3 (No Units)"/></p></td></tr>
+            <tr><td Style='float: left'><p Style='margin-right: 138px'><b>Width</b>:</p></td></tr>
+            <tr><td><p><input onKeyPress={this.onChange} Style='border: 1px solid black; background-color: white; padding-top: 6.25px; padding-bottom: 6.25px; font-size: 16px;' type='number' pattern='[0-9]*' id='width' placeholder=" Ex. 1, 2, 3 (No Units)" onKeyDown={this.handleKeyPress}/></p></td></tr>
+            <tr><td><p><b>Height</b>:</p></td></tr>
+            <tr><td id='goto'><p><input onKeyPress={this.onChange} Style='border: 1px solid black; background-color: white; padding-top: 6.25px; padding-bottom: 6.25px; font-size: 16px;' type='number' pattern='[0-9]*' id='height' placeholder=" Ex. 1, 2, 3 (No Units)" onKeyDown={this.handleKeyPress}/></p></td></tr><br/>
+            <tr><td Style='float: right'><p><input Style='background-color: white; border: 2px solid black; padding-left: 15px; padding-right: 15px; padding-top: 6.25px; padding-bottom: 6.25px; background-color: white; color: black' type='button' value='Clear' onClick={this.clear} /> <input Style='background-color: white; border: 2px solid black; padding-left: 15px; padding-right: 15px; padding-top: 6.25px; padding-bottom: 6.25px; background-color: black; color: white' type='button' value='Submit' onClick={this.solution} /></p></td></tr><br/>
             <div id='solution'></div>
-            </div>
+            </table>
         );
     }
 }
