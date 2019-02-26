@@ -7,7 +7,7 @@ class Pythagoras extends React.Component {
         document.getElementById('leg1').value = '';
         var leg2 = document.getElementById('leg2').value;
         document.getElementById('leg2').value = '';
-        var hyp = Math.sqrt(Math.pow(leg1, 2) + Math.pow(leg2, 2));
+        var hyp = (Math.sqrt(Math.pow(leg1, 2) + Math.pow(leg2, 2))).toFixed(2);
         var solution = document.getElementById('solution');
         solution.innerHTML = '<p><b>Leg 1</b>: ' + leg1 + ' units</p><p><b>Leg 2</b>: ' + leg2 + ' units</p><br/><p><b>Hypotenuse</b>: ' + hyp + ' units</p>';
         document.getElementById('goto').scrollIntoView({behavior: 'smooth'});
