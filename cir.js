@@ -37,12 +37,16 @@ class Circle extends React.Component {
     }
     render() {
         return (
+            <div>
             <table align='center'>
             <tr><td Style='float: left'><p><b>Radius</b>:</p></td></tr>
             <tr id='goto'><td><p><input onKeyPress={this.onChange} Style='border: 1px solid black; background-color: white; padding-top: 6.25px; padding-bottom: 6.25px; font-size: 16px;' type='number' pattern='[0-9]*' id='radius' placeholder=" Ex. 1, 2, 3 (No Units)" onKeyDown={this.handleKeyPress}/></p></td></tr><br/>
-            <tr><td><p Style='float: right'><input Style='background-color: white; border: 2px solid black; padding-left: 15px; padding-right: 15px; padding-top: 6.25px; padding-bottom: 6.25px; background-color: white; color: black' type='button' value='Clear' onClick={this.clear} /> <input Style='background-color: white; border: 2px solid black; padding-left: 15px; padding-right: 15px; padding-top: 6.25px; padding-bottom: 6.25px; background-color: black; color: white' type='button' value='Submit' onClick={this.solution} /></p></td></tr><br/>
-            <div id='solution'></div>
+            <tr><td><p Style='float: right'><input Style='background-color: white; border: 2px solid black; padding-left: 15px; padding-right: 15px; padding-top: 6.25px; padding-bottom: 6.25px; background-color: white; color: black' type='button' value='Clear' onClick={this.clear} /> <input Style='background-color: white; border: 2px solid black; padding-left: 15px; padding-right: 15px; padding-top: 6.25px; padding-bottom: 6.25px; background-color: black; color: white' type='button' value='Calculate' onClick={this.solution} /></p></td></tr><br/>
             </table>
+            <table align='center'>
+            <tr><td Style='text-align: center'><div id='solution'></div></td></tr>
+            </table>
+            </div>
         );
     }
 }
