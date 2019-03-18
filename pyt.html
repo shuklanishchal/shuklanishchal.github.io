@@ -1,0 +1,91 @@
+ <!DOCTYPE html>
+<html>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+<link rel="stylesheet" type="text/css" href="new 1.css">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0">
+<title>Pythagorean</title>
+<head>
+    <link rel="shortcut icon" type="image/png" href="/triangle.PNG"/>
+<script type="text/javascript">
+window.onload = function() {
+document.getElementById("leg1").value = '';
+document.getElementById("leg2").value = '';
+document.getElementById("scroll").scrollIntoView();
+var iOS = !!navigator.platform && /iPad|iPhone|iPod/.test(navigator.platform);
+if(iOS) {
+  document.getElementById('ios').style = "display: ''";
+  document.getElementById('ios2').style = "display: ''";
+  document.getElementById('leg1').type = "text";
+  document.getElementById('leg2').type = "text";
+}
+else {
+  document.getElementById('ios').style = "display: none";
+  document.getElementById('ios2').style = "display: none";
+  document.getElementById('leg1').type = "number";
+  document.getElementById('leg2').type = "number";
+}
+}
+function submit(e) {
+	if(e && e.keyCode == 13) {
+	calc();
+	}
+}
+function isNumberKey(evt){
+    var charCode = (evt.which) ? evt.which : event.keyCode
+    if (charCode > 31 && (charCode != 46 &&(charCode < 48 || charCode > 57)))
+        return false;
+    return true;
+}  
+function calc() {
+var leg1 = document.getElementById("leg1").value;
+document.getElementById("leg1").value = '';
+var leg2 = document.getElementById("leg2").value;
+document.getElementById("leg2").value = '';
+var hyp = (Math.sqrt((leg1*leg1) + (leg2 * leg2))).toFixed(2);
+var work = document.getElementById("work");
+work.innerHTML = ("<p><b>Leg 1</b>: " + leg1 + " units <b>Leg 2</b>: " + leg2 + " units</p><br/><p><b>Hypotenuse</b>: " + hyp + " units</p>");
+work.scrollIntoView();
+}
+function dot() {
+  document.getElementById('leg1').value = document.getElementById('leg1').value + '.'
+  document.getElementById('leg1').focus();
+}
+function dot2() {
+  document.getElementById('leg2').value = document.getElementById('leg2').value + '.'
+  document.getElementById('leg2').focus();
+}
+</script>
+<nav class="navbar navbar-inverse navbar-static-top">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="index.html">Calculators</a>
+    </div>
+    <ul class="nav navbar-nav">
+      <li><a href="cyl.html">Cylinder</a></li>
+      <li><a href="cir.html">Circle</a></li>
+      <li class="active"><a href="pyt.html">Pythagorean</a></li>
+	  <li><a href="rec.html">Rec. Prism</a></li>
+	  <li><a href="tri.html">Tri. Prism</a></li>
+    </ul>
+  </div>
+</nav>
+</head>
+<body>
+<div onKeyPress="submit(event)" />
+<div class="jumbotron text-center"><h1 id="scroll">Pythagorean</h1></div>
+<div class="col-sm-2"></div>
+<div class="col-sm-8" id="stuff">
+<p class="move4"><b>Leg 1</b>:</p><p id="ios3"><input type="text" pattern="[0-9]*" id="leg1" autofocus="autofocus" placeholder=" Ex. 1, 2, 3 (No Units)" onkeypress=" return isNumberKey(event)"></p>
+<p id='ios'><input type="button" value="Add Decimal" onclick="dot()" class="reset"><br/></p>
+<p class="move4"><b>Leg 2</b>:</p><p id="ios4"><input type="text" pattern="[0-9]*" id="leg2" placeholder=" Ex. 1, 2, 3 (No Units)" onkeypress=" return isNumberKey(event)"></p>
+<p id='ios2'><input type="button" value="Add Decimal" onclick="dot2()" class="reset"><br/></p><br/>
+<p><input type="button" value="Reset" onclick="window.location.reload();" class="reset"> <input type="submit" value="Submit" onclick="calc();" class="submit"></p><br/>
+<p><span id="work"></span></p>
+</div>
+<div class="col-sm-2"></div>
+<div class="col-sm-8"><br/><br/><br/>
+<footer>
+<a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons Licence" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" /></a><br /><span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">S.A./Volume/Circumference/Area Calculators</span> by <span xmlns:cc="http://creativecommons.org/ns#" property="cc:attributionName">Nishchal Shukla</span> is licensed under a <a class="link" rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.<br />Based on a work at <a xmlns:dct="http://purl.org/dc/terms/" href="https://shuklanishchal.github.io" rel="dct:source" class="link">shuklanishchal.github.io</a>.</footer></div>
+</body>
+</html>
