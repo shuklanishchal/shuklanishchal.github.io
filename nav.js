@@ -7,9 +7,9 @@ class NavBar extends React.Component {
       document.getElementById('info').innerHTML = '<h1>Cylinder</h1>';
       document.getElementById('title').innerHTML = '<title>Cylinder</title>';
       document.getElementById('cyl').className = 'active';
-      document.getElementById('cir').className = ''; 
-      document.getElementById('pyt').className = ''; 
-      document.getElementById('rec').className = ''; 
+      document.getElementById('cir').className = '';
+      document.getElementById('pyt').className = '';
+      document.getElementById('rec').className = '';
       document.getElementById('tri').className = '';
       ReactDOM.render(<Cylinder />, document.getElementById('app'));
       document.getElementById('app').style = '';
@@ -19,11 +19,11 @@ class NavBar extends React.Component {
     }
     calculator() {
       document.getElementById('info').innerHTML = '<h1>Calculators</h1>';
-      document.getElementById('title').innerHTML = '<title>Calculators</title>';
+      document.getElementById('title').innerHTML = '<title>Surface Area/Volume Calculators</title>';
       document.getElementById('pyt').className = '';
-      document.getElementById('cir').className = ''; 
-      document.getElementById('cyl').className = ''; 
-      document.getElementById('rec').className = ''; 
+      document.getElementById('cir').className = '';
+      document.getElementById('cyl').className = '';
+      document.getElementById('rec').className = '';
       document.getElementById('tri').className = '';
       ReactDOM.render(<Intro />, document.getElementById('app'));
       document.getElementById('app').style="background-color: #cdcdcd; border: 2px solid #e6e6e6";
@@ -37,13 +37,13 @@ class NavBar extends React.Component {
       }
       document.getElementById('info').innerHTML = '<h1>Circle</h1>';
       document.getElementById('title').innerHTML = '<title>Circle</title>';
-      document.getElementById('cir').className = 'active'; 
-      document.getElementById('cyl').className = ''; 
-      document.getElementById('pyt').className = ''; 
-      document.getElementById('rec').className = ''; 
+      document.getElementById('cir').className = 'active';
+      document.getElementById('cyl').className = '';
+      document.getElementById('pyt').className = '';
+      document.getElementById('rec').className = '';
       document.getElementById('tri').className = '';
       ReactDOM.render(<Circle />, document.getElementById('app'));
-      document.getElementById('app').style = '';  
+      document.getElementById('app').style = '';
     }
     cir1() {
       document.getElementById('cir').style.cursor = 'pointer';
@@ -55,12 +55,12 @@ class NavBar extends React.Component {
       document.getElementById('info').innerHTML = '<h1>Pythagorean Theorem</h1>';
       document.getElementById('title').innerHTML = '<title>Pythagorean</title>';
       document.getElementById('pyt').className = 'active';
-      document.getElementById('cir').className = ''; 
-      document.getElementById('cyl').className = ''; 
-      document.getElementById('rec').className = ''; 
+      document.getElementById('cir').className = '';
+      document.getElementById('cyl').className = '';
+      document.getElementById('rec').className = '';
       document.getElementById('tri').className = '';
       ReactDOM.render(<Pythagoras />, document.getElementById('app'));
-      document.getElementById('app').style = '';  
+      document.getElementById('app').style = '';
     }
     pyt1() {
       document.getElementById('pyt').style.cursor = 'pointer';
@@ -72,12 +72,12 @@ class NavBar extends React.Component {
       document.getElementById('info').innerHTML = '<h1>Rectangular Prism</h1>';
       document.getElementById('title').innerHTML = '<title>Rec. Prism</title>';
       document.getElementById('rec').className = 'active';
-      document.getElementById('cir').className = ''; 
-      document.getElementById('pyt').className = ''; 
-      document.getElementById('cyl').className = ''; 
+      document.getElementById('cir').className = '';
+      document.getElementById('pyt').className = '';
+      document.getElementById('cyl').className = '';
       document.getElementById('tri').className = '';
       ReactDOM.render(<Rectangle />, document.getElementById('app'));
-      document.getElementById('app').style = '';  
+      document.getElementById('app').style = '';
     }
     rec1() {
       document.getElementById('rec').style.cursor = 'pointer';
@@ -89,12 +89,12 @@ class NavBar extends React.Component {
       document.getElementById('info').innerHTML = '<h1>Triangular Prism</h1>';
       document.getElementById('title').innerHTML = '<title>Tri. Prism</title>';
       document.getElementById('tri').className = 'active';
-      document.getElementById('cir').className = ''; 
-      document.getElementById('pyt').className = ''; 
-      document.getElementById('rec').className = ''; 
+      document.getElementById('cir').className = '';
+      document.getElementById('pyt').className = '';
+      document.getElementById('rec').className = '';
       document.getElementById('cyl').className = '';
       ReactDOM.render(<Triangle />, document.getElementById('app'));
-      document.getElementById('app').style = '';    
+      document.getElementById('app').style = '';
     }
     tri1() {
       document.getElementById('tri').style.cursor = 'pointer';
