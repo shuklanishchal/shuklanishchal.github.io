@@ -11,6 +11,7 @@ class NavBar extends React.Component {
       document.getElementById('pyt').className = '';
       document.getElementById('rec').className = '';
       document.getElementById('tri').className = '';
+      document.getElementById('home').className = '';
       ReactDOM.render(<Cylinder />, document.getElementById('app'));
       document.getElementById('app').style = '';
     }
@@ -18,8 +19,24 @@ class NavBar extends React.Component {
       document.getElementById('cyl').style.cursor = 'pointer';
     }
     calculator() {
+      if(window.innerWidth <= 766) {
+        document.getElementById('button').click();
+      }
       document.getElementById('info').innerHTML = '<h1>Calculators</h1>';
       document.getElementById('title').innerHTML = '<title>Surface Area/Volume Calculators</title>';
+      document.getElementById('home').className = 'active';
+      document.getElementById('pyt').className = '';
+      document.getElementById('cir').className = '';
+      document.getElementById('cyl').className = '';
+      document.getElementById('rec').className = '';
+      document.getElementById('tri').className = '';
+      ReactDOM.render(<Intro />, document.getElementById('app'));
+      document.getElementById('app').style="background-color: #cdcdcd; border: 2px solid #e6e6e6";
+    }
+    calculator2() {
+      document.getElementById('info').innerHTML = '<h1>Calculators</h1>';
+      document.getElementById('title').innerHTML = '<title>Surface Area/Volume Calculators</title>';
+      document.getElementById('home').className = 'active';
       document.getElementById('pyt').className = '';
       document.getElementById('cir').className = '';
       document.getElementById('cyl').className = '';
@@ -42,6 +59,7 @@ class NavBar extends React.Component {
       document.getElementById('pyt').className = '';
       document.getElementById('rec').className = '';
       document.getElementById('tri').className = '';
+      document.getElementById('home').className = '';
       ReactDOM.render(<Circle />, document.getElementById('app'));
       document.getElementById('app').style = '';
     }
@@ -59,6 +77,7 @@ class NavBar extends React.Component {
       document.getElementById('cyl').className = '';
       document.getElementById('rec').className = '';
       document.getElementById('tri').className = '';
+      document.getElementById('home').className = '';
       ReactDOM.render(<Pythagoras />, document.getElementById('app'));
       document.getElementById('app').style = '';
     }
@@ -76,6 +95,7 @@ class NavBar extends React.Component {
       document.getElementById('pyt').className = '';
       document.getElementById('cyl').className = '';
       document.getElementById('tri').className = '';
+      document.getElementById('home').className = '';
       ReactDOM.render(<Rectangle />, document.getElementById('app'));
       document.getElementById('app').style = '';
     }
@@ -93,11 +113,15 @@ class NavBar extends React.Component {
       document.getElementById('pyt').className = '';
       document.getElementById('rec').className = '';
       document.getElementById('cyl').className = '';
+      document.getElementById('home').className = '';
       ReactDOM.render(<Triangle />, document.getElementById('app'));
       document.getElementById('app').style = '';
     }
     tri1() {
       document.getElementById('tri').style.cursor = 'pointer';
+    }
+    home1() {
+      document.getElementById('home').style.cursor = 'pointer';
     }
     render() {
         return (
@@ -105,18 +129,19 @@ class NavBar extends React.Component {
             <nav class="navbar navbar-inverse navbar-fixed-top" id='nav'>
   <div class="container-fluid">
   <div class="navbar-header">
-	  <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" id='button' data-target="#nav-collapse">
+	  <button type="button" class="navbar-toggle collapsed" Style='float: left' data-toggle="collapse" id='button' data-target="#nav-collapse">
 	   <span class="icon-bar"></span>
 	   <span class="icon-bar"></span>
 	   <span class="icon-bar"></span>
 	   <span class="icon-bar"></span>
 	  </button>
     <div class="navbar-header">
-      <a id='calc' onMouseOver={this.cal} class="navbar-brand" onClick={this.calculator}>Home</a>
+      <a id='calc' onMouseOver={this.cal} class="navbar-brand" onClick={this.calculator2}>Calculators</a>
     </div>
     </div>
     <div class="collapse navbar-collapse" id="nav-collapse">
     <ul class="nav navbar-nav">
+      <li id='home' class='active'><a onMouseOver={this.home1} onClick={this.calculator}>Home</a></li>
       <li id='cyl'><a onMouseOver={this.cyl1} onClick={this.cylinder}>Cylinder</a></li>
       <li id='cir'><a onMouseOver={this.cir1} onClick={this.circle}>Circle</a></li>
       <li id='pyt'><a onMouseOver={this.pyt1} onClick={this.pyt}>Pythagorean</a></li>
