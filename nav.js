@@ -127,31 +127,31 @@ class NavBar extends React.Component {
         return (
           <div>
             <nav class="navbar navbar-inverse navbar-fixed-top" id='nav'>
-  <div class="container-fluid">
-  <div class="navbar-header">
-	  <button type="button" class="navbar-toggle collapsed" Style='float: left' data-toggle="collapse" id='button' data-target="#nav-collapse">
-	   <span class="icon-bar"></span>
-	   <span class="icon-bar"></span>
-	   <span class="icon-bar"></span>
-	   <span class="icon-bar"></span>
-	  </button>
-    <div class="navbar-header">
-      <a id='calc' onMouseOver={this.cal} class="navbar-brand" onClick={this.calculator2}>Calculators</a>
-    </div>
-    </div>
-    <div class="collapse navbar-collapse" id="nav-collapse">
-    <ul class="nav navbar-nav">
-      <li id='home' class='active'><a onMouseOver={this.home1} onClick={this.calculator}>Home</a></li>
-      <li id='cyl'><a onMouseOver={this.cyl1} onClick={this.cylinder}>Cylinder</a></li>
-      <li id='cir'><a onMouseOver={this.cir1} onClick={this.circle}>Circle</a></li>
-      <li id='pyt'><a onMouseOver={this.pyt1} onClick={this.pyt}>Pythagorean</a></li>
-      <li id='rec'><a onMouseOver={this.rec1} onClick={this.rec}>Rec. Prism</a></li>
-      <li id='tri'><a onMouseOver={this.tri1} onClick={this.tri}>Tri. Prism</a></li>
-    </ul>
-    </div>
-  </div>
-</nav><br/><br/>
-</div>
+              <div class="container-fluid">
+                <div class="navbar-header">
+	               <button type="button" class="navbar-toggle collapsed" Style='float: left' data-toggle="collapse" id='button' data-target="#nav-collapse">
+	                <span class="icon-bar"></span>
+	                <span class="icon-bar"></span>
+	                <span class="icon-bar"></span>
+	                <span class="icon-bar"></span>
+	               </button>
+                 <div class="navbar-header">
+                  <a id='calc' onMouseOver={this.cal} class="navbar-brand" onClick={this.calculator2}>Calculators</a>
+                 </div>
+                </div>
+                <div class="collapse navbar-collapse" id="nav-collapse">
+                  <ul class="nav navbar-nav">
+                    <li id='home' class='active'><a onMouseOver={this.home1} onClick={this.calculator}>Home</a></li>
+                    <li id='cyl'><a onMouseOver={this.cyl1} onClick={this.cylinder}>Cylinder</a></li>
+                    <li id='cir'><a onMouseOver={this.cir1} onClick={this.circle}>Circle</a></li>
+                    <li id='pyt'><a onMouseOver={this.pyt1} onClick={this.pyt}>Pythagorean</a></li>
+                    <li id='rec'><a onMouseOver={this.rec1} onClick={this.rec}>Rec. Prism</a></li>
+                    <li id='tri'><a onMouseOver={this.tri1} onClick={this.tri}>Tri. Prism</a></li>
+                  </ul>
+                </div>
+              </div>
+            </nav><br/><br/>
+          </div>
         )
     }
 }
