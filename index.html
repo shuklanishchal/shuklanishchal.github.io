@@ -1,61 +1,320 @@
 <!DOCTYPE html>
-<html>
-    <noscript>
-        <div class='jumbotron text-center'><h1>This browser does not support JavaScript</h1></div>
-        <div class='col-sm-2'></div>
-        <div class='col-sm-8' style='text-align: center'><h3>Without it, this website cannot function. Please enable JavaScript and refresh your browser.</h3></div>
-    </noscript>
-    <head>
-        <meta charset='utf-8' />
-        <meta name="keywords" content="Surface Area, Volume, Calculators, Nishchal Shukla, Cylinder, Circle, Pythagorean Theorem, Rectangular Prism, Triangular Prism"/>
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <div id='title'>
-          <title>Surface Area/Volume Calculators</title>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:200&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro&display=swap" rel="stylesheet">
+    <script src="https://use.fontawesome.com/ac6b5a55c1.js"></script>
+    <script src='request.js'></script>
+    <script src='index.js'></script>
+    <link rel='stylesheet' type='text/css' href='index.css' />
+    <title>Nishchal Shukla</title>
+      <noscript>
+        <div style='color: white;' class='text-center center-all page'>
+          <div class='jumbotron'>
+            <img class='img-fluid mx-auto d-flex sig' src='signature_static.PNG' />
+          </div>
+          <div class='container'><h1>Please enable JavaScript to continue browsing this website.</h1></div>
+          <style type='text/css'>
+          #noScriptDisplay {
+            display: none;
+          }
+          </style>
         </div>
-        <link rel="shortcut icon" href="/logo transparent.png" style='width: 32px, height: 32px' type="image/x-icon">
-        <link rel="icon" href="/logo transparent.png" style='width: 16px, height: 16px' type="image/x-icon">
-        <meta name="google-site-verification" content="ZStEa71eMkVawDGLr8TUbi4Dcwer0tbiqhaE7JEC0LU" />
-        <meta name="description" content="Here's one of the best surface area and volume calculators for a cylinder, rectangular prism, and triangular prism, also with a circle circumference/area calculator and a Pythagorean Theorem calculator!" />
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-        <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
-        <script src="https://unpkg.com/react@16/umd/react.production.min.js" crossorigin></script>
-        <script src="https://unpkg.com/react-dom@16/umd/react-dom.production.min.js" crossorigin></script>
-        <script type='text/babel' src='index.js'></script>
-        <script type='text/babel' src='nav.js'></script>
-        <script type='text/babel' src='cyl.js'></script>
-        <script type='text/babel' src='cir.js'></script>
-        <script type='text/babel' src='pyt.js'></script>
-        <script type='text/babel' src='rec.js'></script>
-        <script type='text/babel' src='tri.js'></script>
-    </head>
-    <style>
-      .jumbotron {
-          background-color: white;
-      }
-      html, body {
-        max-width: 100%;
-        overflow-x: hidden;
-      }
-    </style>
-    <script type='text/javascript'>
-      window.onload = function() {
-        document.getElementById('nav').scrollIntoView({behavior: 'smooth'});
-      }
-    </script>
-    <body>
-        <div id='nav'></div>
+      </noscript>
+  </head>
+  <body data-spy="scroll" data-target=".navbar" data-offset="50">
+    <div id='noScriptDisplay'>
+
+      <!-- Navbar -->
+      <nav style='display: none' class="navbar navbar-expand-md fixed-top">
+        <a class="navbar-brand" href="#home" onclick='scrollToAnchor("home")'>N.S.</a>
+        <button class="navbar-toggler" id='toggler' type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+          <i id='toggler2' class="fa fa-bars" style='color: #45a29e;'></i>
+        </button>
+        <div class="collapse navbar-collapse" id="collapsibleNavbar">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" onclick='home()' href="#home">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" onclick='about()' href="#about">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" onclick='portfolio()' href="#portfolio">Portfolio</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" onclick='contact()' href="#contact">Contact</a>
+            </li>
+          </ul>
+          <ul class='navbar-nav ml-auto'>
+            <li class='nav-item'>
+              <a class='nav-link' target='_blank' href='https://www.linkedin.com/in/nishchal-shukla1/'><i class='fa fa-linkedin'></i></a>
+            </li>
+              <li class='nav-item'>
+                <a class='nav-link' target='_blank' href='https://github.com/shuklanishchal'><i class='fa fa-github'></i></a>
+              </li>
+          </ul>
+        </div>
+      </nav>
+      <!-- End Navbar -->
+
+      <!-- Home Page -->
+      <div class='text-center center-all page' id='home'>
+        <div class='jumbotron text-center' id='image'>
+          <img class='img-fluid mx-auto d-flex sig' alt='My Styled Name' id='sig' />
+        </div>
+        <div class='container center-all'>
+          <div class='row text-center'>
+            <a target='_blank' href='https://www.linkedin.com/in/nishchal-shukla1/' class='social-icons' id='linkedin'>
+              <i class='fa fa-linkedin fa-2x' aria-hidden='true'></i>
+              <span>
+                LinkedIn
+              </span>
+            </a><br/><br/>
+            <a target='_blank' href='https://github.com/shuklanishchal' class='social-icons' id='github'>
+              <i class='fa fa-github fa-2x' aria-hidden='true'></i>
+              <span>
+                GitHub
+              </span>
+            </a>
+          </div>
+        </div>
+        <div id='bottom'>
+          <a href='#about' class='noHover' style='color: black;' onclick='scrollToAnchor("about");'>
+            <span style='font-family: "Montserrat", sans-serif; font-size: 20px; color: white;'>
+              VIEW MORE
+            </span><br/>
+            <span class='rotate' style='color: white;'>&#10148;</span>
+          </a>
+        </div>
+      </div>
+      <!-- End Home Page -->
+
+      <!-- About Page -->
+      <div id='about'>
+        <br/><br/>
         <div class='jumbotron text-center'>
-          <div id='info'></div>
+          <h1 style='color: #45a29e;'>About</h1><br/>
+          <img id='myPhoto' alt='Nishchal Shukla' class='img-thumbnail' src='MyPhoto.PNG' />
         </div>
-        <div class='col-sm-2'></div>
-        <div class='col-sm-8' id='app'></div>
-        <div class="col-sm-2"></div>
-        <div class="col-sm-8"><br/><br/><br/>
-          <footer>
-            <a rel="license" target="_blank" href="http://creativecommons.org/licenses/by-nc/4.0/"><img alt="Creative Commons Licence" style="border-width:0" src="https://i.creativecommons.org/l/by-nc/4.0/88x31.png" /></a><br /><span xmlns:dct="http://purl.org/dc/terms/" href="http://purl.org/dc/dcmitype/InteractiveResource" property="dct:title" rel="dct:type">Surface Area/Volume Calculators</span> by <a xmlns:cc="http://creativecommons.org/ns#" target="_blank" href="https://www.linkedin.com/in/nishchal-shukla-909468175/" property="cc:attributionName" rel="cc:attributionURL">Nishchal Shukla</a> is licensed under a <a target="_blank" rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/">Creative Commons Attribution-NonCommercial 4.0 International License</a>.<br />Based on a work at <a target="_blank" xmlns:dct="http://purl.org/dc/terms/" href="https://github.com/shuklanishchal/shuklanishchal.github.io" rel="dct:source">https://github.com/shuklanishchal/<br/>shuklanishchal.github.io</a>.<br/>Can't see anything?<br/>Browser noscript and JavaScript must be disabled.
-          </footer>
+        <div class='container' style='color: white;'>
+          <div class='row'>
+            <div class='col-md-8 offset-md-2'>
+              <h4>I am currently a junior (11th grade student) at Kentwood High School. Outside of school, I'm a self-taught web developer looking for opportunities to develop all the time.</h4>
+              <br/><br/>
+            </div>
+          </div>
+          <h3 class='text-center'>Keep scrolling to browse my portfolio!</h3>
         </div>
-    </body>
+      </div>
+      <!-- End About Page -->
+
+      <!-- Portfolio Page -->
+      <div class='text-center' id='portfolio'>
+        <br/><br/>
+        <div class='jumbotron'><h1 style='color: #45a29e;'>Portfolio</h1></div>
+        <div class='container'>
+          <div class='row'>
+            <div class='col-md-4 project-image'>
+              <a data-toggle="modal" data-target="#education">
+                <div id='image1'>
+                  Education
+                </div>
+              </a>
+            </div>
+            <div class='col-md-4 project-image'>
+              <a data-toggle="modal" data-target="#projects">
+                <div id='image2'>
+                  Projects
+                </div>
+              </a>
+            </div>
+            <div class='col-md-4 project-image'>
+              <a data-toggle="modal" data-target="#hobbies">
+                <div id='image3'>
+                  Hobbies
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- End Portfolio Page -->
+
+      <!-- Contact Page -->
+      <div class='text-center' id='contact'>
+        <br/><br/>
+        <div class='jumbotron text-center'><h1 style='color: #45a29e;'>Contact</h1></div><br/>
+        <div class='container' style='color: white;'>
+          <div class='row'>
+            <div class='col-sm-6 offset-sm-3'>
+              <form>
+                <label for='name'>Name (first and last): <span style='color: red'>*</span></label>
+                <p><input type='text' id='name' name='name' placeholder='Ex: John Smith' /></p>
+                <label for='email'>Email: <span style='color: red'>*</span></label>
+                <p><input type='text' id='email' name='email' placeholder='Ex: john.smith@example.com' /></p>
+                <label for='phone'>Phone:</label>
+                <p><input type='text' id='phone' name='phone' placeholder='(Auto-formatted in USA format)' /></p>
+                <label for='message'>Message:</label>
+                <p><textarea name='message' id='message' placeholder='If residing anywhere not using a USA formatted phone number, please put area code in this area.'></textarea></p><br/>
+                <input type='hidden' id='hidden' name='hidden' />
+                <p><input type='button' id='submit' class='button' value='Send' /></p>
+                <div id='errorFocus'><p id='error'></p></div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- End Contact Page -->
+
+      <!-- Modals for Portfolio Page -->
+      <div class="modal fade" id="education" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLongTitle" style='color: white'>Education</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <div class='container' style='color: white;'>
+                <div class='row'>
+                  <div class='col-md-6 pad-bottom'>
+                    Kentwood High School
+                  </div>
+                  <div class='col-md-6'>
+                    This is where I currently am, as an 11th grader. I have taken a total of 6 AP classes, with AP World History in 9th grade, and AP Physics, AP Language and Composition, AP Calculus, AP US History, and AP Computer Science currently. I have also taken two Honors English classes in my 9th and 10th grade years, respectively. I have maintained a high 3.97 unweighted GPA, and I am currently in the process of co-founding a programming club. I am also a member of the math club. I also wrestled for the school wrestling team for my 9th and 10th grade years.
+                  </div>
+                </div><br/><hr class='hr'/><br/>
+                <div class='row'>
+                  <div class='col-sm-6 pad-bottom'>
+                    Meridian Middle School
+                  </div>
+                  <div class='col-sm-6'>
+                    I attended this school in my 7th and 8th grade years. I took Honors Social Studies and Honors English both of these years. I received the Kent Rotary Student of the Month award during this time, and the President's Award as well. For both of these years, I maintained a 4.0 GPA, and participated in Game Club. I also helped mentor struggling math students after school in 8th grade. I also played football and wrestled for both of these years.
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="button" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal fade" id="projects" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLongTitle" style='color: white'>Projects</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <div class='container' style='color: white;'>
+                <div class='row'>
+                  <div class='col-md-6 pad-bottom'>
+                    Mathemacure
+                  </div>
+                  <div class='col-md-6'>
+                    This was the first website I made in collaboration with another person. I used the same simple Bootstrap techniques I employed in my previous project and developed, with my friend, a site that created math worksheets for teachers. This is where my friend and I used a combination of PHP and JavaScript to create worksheet generators, using HTML, CSS, and the Bootstrap library to present it in website form. It's now an open source project <a target='_blank' href='https://github.com/nsdrozario/math-worksheet-generator'>here</a>.
+                  </div>
+                </div><br/><hr class='hr'/><br/>
+                <div class='row'>
+                  <div class='col-sm-6 pad-bottom'>
+                    Calculators
+                  </div>
+                  <div class='col-sm-6'>
+                    In around my 8th grade year, I built a website which calculated the surface area and volume of various 3d shapes. This was around the time I started learning about Bootstrap and using a fraction of its CSS library. The site used to be static, but in the middle of 9th grade, I made it dynamic with the use of React.JS and ReactDOM. The website can be found <a target='_blank' href='https://shuklanishchal.github.io'>here</a>.
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="button" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal fade" id="hobbies" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLongTitle" style='color: white'>Hobbies</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <div class='container' style='color: white;'>
+                <div class='row'>
+                  <div class='col-md-6 pad-bottom'>
+                    Music
+                  </div>
+                  <div class='col-md-6'>
+                    Ever since I picked up a flute in 5th grade, I have had a passion for music. I started getting into orchestral soundtracks as well. By 7th grade, I liked orchestral soundtracks more than other music, and by 8th grade, I started honing in on music from my favorite video game series <i>Assassin's Creed</i>. By 9th grade, I started making my own remixes of these soundtracks, which is what I do even now. I still play the flute, being an active member of the wind ensemble at my   school.
+                  </div>
+                </div><br/><hr class='hr'/><br/>
+                <div class='row'>
+                  <div class='col-sm-6 pad-bottom'>
+                    Mathematics
+                  </div>
+                  <div class='col-sm-6'>
+                    I started taking math classes at a tutoring class at the age of 6 as well. I started learning advanced math very fast. I got to calculus by 7th grade, which is when I stopped going there. However, I still learn math on my own through self learning and scouring the Internet.
+                  </div>
+                </div><br/><hr class='hr'/><br/>
+                <div class='row'>
+                  <div class='col-sm-6 pad-bottom'>
+                    Martial Arts
+                  </div>
+                  <div class='col-sm-6'>
+                    I started attending lessons in the art of Taekwondo at the age of 6. At the age of 8, I got my first black belt, with my second degree at 12 years old. Sadly, I don't attend that school anymore due to its closing, but I hope to continue my interest in martial arts through Judo at my high school.
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="button" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- End Modals for Portfolio Page -->
+
+      <!-- Contact Form Modal -->
+      <div class="modal fade" id="contactSubmit" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button style='display: none;' type="button" class="close closeButton" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <div class='container' style='color: white;'>
+                <div class='row'>
+                  <div class='col-md-12 text-center'>
+                    <p id='submitting'></p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button style='display: none' type="button" class="button closeButton" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- End Contact Form Modal -->
+
+    </div>
+  </body>
 </html>
