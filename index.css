@@ -160,7 +160,7 @@ hr.hr {
     width: auto;
 }
 
-input[type=text] {
+input[type=text], input[type=email], input[type=tel] {
   background-color: transparent;
   border: 2px solid #45a29e;
   min-height: 40px;
@@ -171,7 +171,7 @@ input[type=text] {
   color: white;
 }
 
-input[type=text]:focus {
+input[type=text]:focus, input[type=email]:focus, input[type=tel]:focus {
   border: 2px solid white;
 }
 
