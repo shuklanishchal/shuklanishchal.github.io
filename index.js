@@ -37,6 +37,11 @@ function contact() {
   }
   scrollToAnchor('contact');
 }
+function checkSubmit(e) {
+   if(e && e.keyCode == 13) {
+      $('#submit').submit2();
+   }
+}
 $(window).scroll(function() {
   $('.navbar').fadeIn();
 });

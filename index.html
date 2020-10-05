@@ -155,7 +155,7 @@
         <div class='container' style='color: white;'>
           <div class='row'>
             <div class='col-sm-6 offset-sm-3'>
-              <form>
+              <form onkeyup="return checkSubmit(event)">
                 <label for='name'>Name (first and last): *</label>
                 <p><input type='text' id='name' name='name' placeholder='Ex: John Smith' /></p>
                 <label for='email'>Email: *</label>
