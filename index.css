@@ -140,10 +140,6 @@ li > a.active:after {
   font-size: 25px;
 }
 
-#bottom {
-  position: absolute;
-  bottom: 15vh;
-}
 
 hr.hr {
   background-color: #45a29e;
@@ -253,6 +249,20 @@ label {
   color: white;
 }
 
+@media screen and (max-width: 768px) {
+  #bottom {
+    position: absolute;
+    top:100vh;
+    transform:translateY(-420%);
+  }
+}
+@media screen and (min-width: 768px) {
+  #bottom {
+    position: absolute;
+    top:100vh;
+    transform:translateY(-200%);
+  }
+}
 @media (hover: hover) {
 
   .button:hover {
