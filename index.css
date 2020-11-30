@@ -2,6 +2,10 @@
   outline: none;
 }
 
+#noScriptDisplay {
+  display: none;
+}
+
 .navbar {
   font-size: 4vh;
   background-color: #1f2833;

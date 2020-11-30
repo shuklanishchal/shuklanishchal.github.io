@@ -3,6 +3,7 @@ function scrollToAnchor(aid) {
   $('html, body').animate({scrollTop: divTag.offset().top}, 1000);
 }
 window.onload = function() {
+  $('#noScriptDisplay').css('display', 'inline');
   $('#bottom').css('opacity', '0');
   $('#linkedin').css('opacity', '0');
   $('#github').css('opacity', '0');
