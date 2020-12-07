@@ -1,0 +1,67 @@
+body {
+  background: linear-gradient(rgba(255,255,255,0.6), rgba(255,255,255,0.6)), url('background.png');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  font-family: 'Roboto', sans-serif;
+}
+
+.jumbotron {
+  background: transparent;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.center-all {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.page {
+  height: 100vh;
+}
+
+.button:before {
+  content: "";
+  background: inherit;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  box-shadow: inset 0 0 0 3000px rgba(255, 255, 255, 0.5);
+  filter: blur(10px);
+}
+
+.button {
+  position: relative;
+  font-family: 'Montserrat', sans-serif;
+  padding: 20px 10px;
+  margin: 20px;
+  background: inherit;
+  border-radius: 5px;
+  color: black;
+  transition: .5s;
+  overflow: hidden;
+}
+
+.white {
+  background: white;
+  border-radius: 15px 15px 0 0;
+}
+
+#malcolm-gladwell {
+  margin-bottom: 20px;
+}
+
+@media (hover:hover) {
+  .button:hover {
+    text-decoration: none;
+    color: black;
+    box-shadow: inset 0 0 0 3000px rgba(255, 255, 255, 1);
+    transition: .5s;
+  }
+}
