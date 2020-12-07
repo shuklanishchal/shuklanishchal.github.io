@@ -1,17 +1,16 @@
 $(document).ready(function() {
+  $.fn.widest = function() {
+    return this.length ? this.width(Math.max.apply(Math, this.map(function() {
+      return $(this).width();
+    }))) : this;
+  };
+  $('.button').widest();
   if($(window).width() < 766) {
     $('#responsive-buttons').addClass('btn-group-vertical');
   }
   else {
     $('#responsive-buttons').addClass('row');
   }
-  $.fn.widest = function() {
-    return this.length ? this.width(Math.max.apply(Math, this.map(function() {
-      return $(this).width();
-    }))) : this;
-	};
-
-  $('.button').widest();
 });
 
 $(window).resize(function() {
