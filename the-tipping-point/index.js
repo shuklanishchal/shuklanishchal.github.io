@@ -1,10 +1,4 @@
 $(document).ready(function() {
-  $.fn.widest = function() {
-    return this.length ? this.width(Math.max.apply(Math, this.map(function() {
-      return $(this).width();
-    }))) : this;
-  };
-  $('.button').widest();
   if($(window).width() < 766) {
     $('#responsive-buttons').addClass('btn-group-vertical');
   }
@@ -26,9 +20,28 @@ $(window).resize(function() {
 
 function scrollToAnchor(aid) {
   var divTag = $('div[id="' + aid + '"]');
-  $('html, body').animate({scrollTop: divTag.offset().top}, 1000);
+  $('html, body').animate({scrollTop: (divTag.offset().top - 50)}, 1000);
 }
 
-function aboutTheAuthor() {
-  scrollToAnchor('about-the-author');
+function sellingPoints() {
+  scrollToAnchor('selling-points');
 }
+
+function showSellingPoints() {
+  $('#1').css('visibility', 'visible').hide().fadeIn('slow', function() {
+    $('#2').css('visibility', 'visible').hide().fadeIn('slow', function() {
+      $('#3').css('visibility', 'visible').hide().fadeIn('slow');
+    });
+  });
+}
+
+$(window).on('scroll', function() {
+    var top_of_element = $(".selling-point").offset().top;
+    var bottom_of_element = $(".selling-point").offset().top + $(".selling-point").outerHeight();
+    var bottom_of_screen = $(window).scrollTop() + $(window).innerHeight();
+    var top_of_screen = $(window).scrollTop();
+    if ((bottom_of_screen > top_of_element) && (top_of_screen < bottom_of_element)){
+        showSellingPoints();
+        $(window).off('scroll');
+    }
+});
