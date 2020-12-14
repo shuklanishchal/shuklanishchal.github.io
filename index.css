@@ -253,11 +253,19 @@ label {
   color: white;
 }
 
+.container-fluid {
+  width: calc(100vw - 10vh);
+}
+
 @media screen and (max-width: 768px) {
   #bottom {
     position: absolute;
     top:100vh;
     transform:translateY(-420%);
+  }
+
+  .container-fluid {
+    width: 100%;
   }
 }
 @media screen and (min-width: 768px) {
