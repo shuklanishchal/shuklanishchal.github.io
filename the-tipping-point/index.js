@@ -20,7 +20,7 @@ $(window).resize(function() {
 
 function scrollToAnchor(aid) {
   var divTag = $('div[id="' + aid + '"]');
-  $('html, body').animate({scrollTop: (divTag.offset().top - 50)}, 1000);
+  $('html, body').animate({scrollTop: (divTag.offset().top)}, 1000);
 }
 
 function sellingPoints() {
