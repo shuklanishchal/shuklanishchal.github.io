@@ -79,12 +79,36 @@ body {
   font-size: 1.5em;
 }
 
-#selling-points {
+.title-smaller {
+  font-size: 1.3em;
+}
+
+.start {
   border-radius: 15px 15px 0 0;
+}
+
+.end {
+  border-radius: 0 0 15px 15px;
+}
+
+.total {
+  border-radius: 15px;
 }
 
 #malcolm-gladwell {
   margin-bottom: 20px;
+}
+
+.law {
+  margin: 20px 0;
+}
+
+.description {
+  padding-bottom: 30px;
+}
+
+#multiple-stories {
+  display: none;
 }
 
 @media (hover:hover) {

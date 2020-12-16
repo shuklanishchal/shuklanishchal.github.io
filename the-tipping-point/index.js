@@ -18,13 +18,12 @@ $(window).resize(function() {
   }
 });
 
-function scrollToAnchor(aid) {
+function scrollToAnchor(aid, callback) {
   var divTag = $('div[id="' + aid + '"]');
-  $('html, body').animate({scrollTop: (divTag.offset().top)}, 1000);
-}
-
-function sellingPoints() {
-  scrollToAnchor('selling-points');
+  $('html, body').animate({scrollTop: (divTag.offset().top - 50)}, 1000);
+  if(typeof callback === 'function') {
+    callback();
+  }
 }
 
 function showSellingPoints() {
@@ -45,3 +44,23 @@ $(window).on('scroll', function() {
         $(window).off('scroll');
     }
 });
+
+function sellingPoints() {
+  scrollToAnchor('selling-points');
+}
+
+function multipleStories() {
+  $('#selling-points').removeClass('total');
+  $('#selling-points').addClass('start');
+  $('#multiple-stories').fadeIn('slow', function() {
+  scrollToAnchor('multiple-stories');
+  });
+}
+
+function multipleStoriesDone() {
+  $('#selling-points').removeClass('start');
+  $('#selling-points').addClass('total');
+  scrollToAnchor('selling-points', function() {
+  $('#multiple-stories').fadeOut('slow');
+  });
+}
