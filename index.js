@@ -15,28 +15,28 @@ window.onload = function() {
   setTimeout(function(){ document.getElementById('sig').src = "signature_static.png"; $('#linkedin').animate({opacity: 1}); $('#github').animate({opacity: 1}); $('#bottom').animate({opacity: 1});}, 2290);
 }
 function home() {
-  if($(window).width() < 766) {
+  if($(window).width() < 992) {
     $('#toggler').click();
   }
   scrollToAnchor('home');
 }
 function about() {
-  if($(window).width() < 766) {
+  if($(window).width() < 992) {
     $('#toggler').click();
   }
   scrollToAnchor('about');
 }
 function portfolio() {
-  if($(window).width() < 766) {
+  if($(window).width() < 992) {
     $('#toggler').click();
   }
   scrollToAnchor('portfolio');
 }
 function contact() {
-  if($(window).width() < 766) {
+  if($(window).width() < 992) {
     $('#toggler').click();
   }
-  scrollToAnchor('contact');
+  scrollToAnchor('contact-header');
 }
 function checkSubmit(e) {
    if(e && e.keyCode == 13) {

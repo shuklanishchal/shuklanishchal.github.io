@@ -46,6 +46,14 @@ head, body {
   justify-content: center;
 }
 
+.center-all-special {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
 .page {
   height: 100vh;
 }
@@ -257,6 +265,10 @@ label {
   width: calc(100vw - 10vh);
 }
 
+.page-special {
+  height: 100vh;
+}
+
 @media screen and (max-width: 768px) {
   #bottom {
     position: absolute;
@@ -266,6 +278,16 @@ label {
 
   .container-fluid {
     width: 100%;
+  }
+
+  .page-special {
+    height: auto;
+  }
+
+  .center-all-special {
+    display: block;
+    align-items: baseline;
+    justify-content: space-between;
   }
 }
 @media screen and (min-width: 768px) {
