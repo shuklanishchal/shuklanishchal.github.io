@@ -53,7 +53,7 @@ body {
 .button {
   position: relative;
   font-family: 'Montserrat', sans-serif;
-  padding: 20px 10px;
+  padding: 3px 0;
   margin: 20px;
   text-decoration: none;
   border-radius: 5px;
@@ -68,6 +68,7 @@ body {
 }
 
 .button:hover {
+  padding: 20px 7px;
   text-decoration: none;
   color: black;
 }
