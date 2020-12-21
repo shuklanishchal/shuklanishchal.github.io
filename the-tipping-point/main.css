@@ -53,7 +53,7 @@ body {
 .button {
   position: relative;
   font-family: 'Montserrat', sans-serif;
-  padding: 3px 0;
+  padding: 7px 0;
   margin: 20px;
   text-decoration: none;
   border-radius: 5px;
@@ -114,8 +114,15 @@ body {
   padding-bottom: 30px;
 }
 
-#multiple-stories {
+.hide-display {
   display: none;
+}
+
+.sell-button {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  left: 0;
 }
 
 @media (hover:hover) {

@@ -19,7 +19,7 @@
         <img class='img-fluid mx-auto d-flex' alt='The Tipping Point' src='tipping-point-logo.png' title='Picture Credit: https://abcofsuccess.com/wp-content/uploads/2014/05/Tipping-Point.jpg' />
       </div>
       <div id='responsive-buttons'>
-        <a onclick='sellingPoints()' class='button'><b>Discover How it Tips.</b></a>
+        <a onclick='scrollToAnchor("selling-points")' class='button'><b>Discover How it Tips.</b></a>
       </div>
     </div>
     <div class='container-fluid white total center-all' id="selling-points">
@@ -30,61 +30,91 @@
         <div class='col-lg-4 border-right selling-point' id="1">
           <p class='title text-center'>Multiple Stories in One</p>
           <p class='container'>Gladwell uses a variety of different stories and anecdotes to support his point, with descriptions as good as ones in fiction books. For each law he describes, there’s at least two stories with it.</p><br/>
-          <p class='text-center'><a class='button' onclick='multipleStories()'>Give Me Examples!</a></p>
+          <div class='sell-button text-center'><a class='button' onclick='reveal("multiple-stories")'>Give Me Examples!</a></div>
         </div>
         <div class='col-lg-4 border-right selling-point' id="2">
           <p class='title text-center'>Easy to Read</p>
-          <p class='container'>Gladwell uses diction that even an average middle school reader can understand. He makes sure to cater to a wide variety of people through his diction, not only a group of intellectuals.</p><br/>
-          <p class='text-center'><a class='button'>How Easy Is It?</a></p>
+          <p class='container'>Gladwell cracked the code of how to use high school level diction with references a middle schooler can understand to get his point across perfectly. He doesn’t go overboard, but neither does he settle for less.</p><br/>
+          <div class='sell-button text-center'><a class='button' onclick='reveal("easy-to-read")'>How Easy Is It?</a></div>
         </div>
         <div class='col-lg-4 selling-point' id="3">
           <p class='title text-center'>Painting with Words</p>
           <p class='container'>The fiction-book-like descriptions paint a picture in your mind about exactly what is going on. Gladwell does not believe in leaving the readers out of any type of context, in any way.</p><br/>
-          <p class='text-center'><a class='button'>But Can He Paint Well?</a></p>
+          <div class='sell-button text-center'><a class='button'>But Can He Paint Well?</a></div>
         </div>
       </div>
     </div>
-
-    <div class='container-fluid white end description' id='multiple-stories'>
-      <div class='jumbotron text-center'>
-        <h1>Multiple Stories in One? How?</h1>
-      </div>
-      <div class='col-lg-12 text-center'>
-        <p class='title'>Let's break it down.</p>
-      </div><br/>
-      <div class='col-lg-12'>
-        <p class='container'>Gladwell, in his book, describes three laws:</p>
-      </div><br/>
-      <div class='container'>
-        <div class='row text-center'>
-          <div class='col-lg-4 law'>
-            <p class='title-smaller'>Law of the Few</p>
+    <div id='explanations'>
+      <div class='container-fluid white end description hide-display' id='multiple-stories'>
+        <div class='jumbotron text-center'>
+          <h1>Multiple Stories in One? How?</h1>
+        </div>
+        <div class='col-lg-12 text-center'>
+          <p class='title'>Let's break it down.</p>
+        </div><br/>
+        <div class='col-lg-12'>
+          <p class='container'>Gladwell, in his book, describes three laws:</p>
+        </div><br/>
+        <div class='container'>
+          <div class='row text-center'>
+            <div class='col-lg-4 law'>
+              <p class='title-smaller'>Law of the Few</p>
+            </div>
+            <div class='col-lg-4 law'>
+              <p class='title-smaller'>The Stickiness Factor</p>
+            </div>
+            <div class='col-lg-4 law'>
+              <p class='title-smaller'>Power of Context</p>
+            </div>
           </div>
-          <div class='col-lg-4 law'>
-            <p class='title-smaller'>The Stickiness Factor</p>
-          </div>
-          <div class='col-lg-4 law'>
-            <p class='title-smaller'>Power of Context</p>
+        </div><br/>
+        <div class='col-lg-12'>
+          <p class='container'>When describing each law, he uses, you guessed it, <b>stories</b> as his lead-in to each of them. The best part is that he uses the same order of story genres for every law. Here’s how it goes:</p>
+        </div><br/>
+        <div class='container'>
+            <p class='container'>He starts off with a description of a real event,</p>
+            <p class='container'>Then goes into experiments/statistics to prove his law,</p>
+            <p class='container'>And to top it all off, he doses his readers with an awe-inspiring hook to the next chapter.</p>
+        </div><br/>
+        <div class='col-lg-12'>
+          <p class='container'>It's important to understand that the book is written in 2002. This is why a lot of the examples that Gladwell uses, like <i>Sesame Street</i>, feel "old". If the context was that the book was made this year, the example might've been <i>Fortnite</i> for all we know!</p><br/>
+          <div class='text-center'>
+            <p><a class='button' onclick='revealDone("multiple-stories")'>Thanks! You can leave now.</a></p>
           </div>
         </div>
-      </div><br/>
-      <div class='col-lg-12'>
-        <p class='container'>When describing each law, he uses, you guessed it, <b>stories</b> as his lead-in to each of them. The best part is that he uses the same order of story genres for every law. Here’s how it goes:</p>
-      </div><br/>
-      <div class='container'>
-          <p class='container'>He starts off with a description of a real event,</p>
-          <p class='container'>Then goes into experiments/statistics to prove his law,</p>
-          <p class='container'>And to top it all off, he doses his readers with an awe-inspiring hook to the next chapter.</p>
-      </div><br/>
-      <div class='col-lg-12'>
-        <p class='container'>It's important to understand that the book is written in 2002. This is why a lot of the examples that Gladwell uses, like <i>Sesame Street</i>, feel "old". If the context was that the book was made this year, the example might've been <i>Fortnite</i> for all we know!</p><br/>
-        <div class='text-center'>
-          <p><a class='button' onclick='multipleStoriesDone()'>Thanks! You can leave now.</a></p>
+      </div>
+      <div class='container-fluid white end description hide-display' id='easy-to-read'>
+        <div class='jumbotron text-center'>
+          <h1>How easy is it to read, really?</h1>
+        </div>
+        <div class='col-lg-12 text-center'>
+          <p class='title-smaller'>It's easier than you think.</p>
+        </div><br/>
+        <div class='col-lg-12'>
+          <p class='container'>Take a quick look at this excerpt from the book:</p>
+        </div><br/>
+        <div class='container'>
+          <p class='container'>“This was the legacy of <i>Sesame Street:</i> If you paid careful attention to the structure and format of your material, you could dramatically enhance stickiness. But is it possible to make a show even stickier than <i>Sesame Street</i> ?” (Gladwell 110).</p>
+        </div><br/>
+        <div class='col-lg-12'>
+          <p class='container'>Here’s what’s fascinating. He’s making a children’s show his focal point of explaining the Stickiness Factor, but look at the words he uses, like</p>
+          <div class='container'>
+            <ul>
+              <li>Attention</li>
+              <li>Structure</li>
+              <li>Format</li>
+              <li>Material</li>
+            </ul>
+          </div>
+          <p class='container'> Gladwell, through his methodical diction, is laying out his ideas in an organized, professional manner, which makes readers overlook the fact that a children’s show was just used as evidence. That's what he's really good at: using ubiquitous references and credibly explaining them with high level diction, and that's what, in fact, makes reading this book easy.</p>
+          <div class='text-center'>
+            <p><a class='button' onclick='revealDone("easy-to-read")'>Thanks! You can leave now.</a></p>
+          </div>
         </div>
       </div>
-    </div><br/>
-
-    <div class='container-fluid white total'>
+    </div>
+    <br/>
+    <div class='container-fluid white total' id='about-the-author'>
       <div class='jumbotron text-center'>
         <h1>About the Author</h1>
       </div>

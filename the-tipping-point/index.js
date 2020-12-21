@@ -45,22 +45,19 @@ $(window).on('scroll', function() {
     }
 });
 
-function sellingPoints() {
-  scrollToAnchor('selling-points');
-}
-
-function multipleStories() {
+function reveal(id) {
+  $('#explanations').children().hide();
   $('#selling-points').removeClass('total');
   $('#selling-points').addClass('start');
-  $('#multiple-stories').fadeIn('slow', function() {
-  scrollToAnchor('multiple-stories');
+  $('#' + id).fadeIn('slow', function() {
+  scrollToAnchor(id);
   });
 }
 
-function multipleStoriesDone() {
+function revealDone(id) {
   $('#selling-points').removeClass('start');
   $('#selling-points').addClass('total');
   scrollToAnchor('selling-points', function() {
-  $('#multiple-stories').fadeOut('slow');
+  $('#' + id).fadeOut('slow');
   });
 }
