@@ -125,6 +125,10 @@ body {
   left: 0;
 }
 
+.carousel-box {
+  margin: 0px calc(100vh - 45vw);
+}
+
 @media (hover:hover) {
   .button:hover {
     background-color: rgba(255, 255, 255, 0.4);
@@ -149,5 +153,9 @@ body {
 
   .page-special {
     height: auto;
+  }
+
+  .carousel-box {
+    margin: 0px 30px;
   }
 }
