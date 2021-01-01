@@ -61,3 +61,18 @@ function revealDone(id) {
   $('#' + id).fadeOut('slow');
   });
 }
+
+function getMaxHeight(sel) {
+    max = 0;
+    $(sel).each(function(){
+        c_height = parseInt($(this).height());
+        if (c_height > max) {
+            max = c_height;
+        }
+    });
+    return max;
+}
+
+$(window).on('load resize orientationchange', function() {
+  $('.carousel-box').height(getMaxHeight('.carousel-box'));
+});
