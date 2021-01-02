@@ -127,6 +127,7 @@ body {
 
 .carousel-box {
   margin: 0px calc(100vh - 45vw);
+  height: auto;
 }
 
 @media (hover:hover) {

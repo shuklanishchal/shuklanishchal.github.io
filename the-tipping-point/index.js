@@ -16,6 +16,7 @@ $(window).resize(function() {
     $('#responsive-buttons').addClass('row');
     $('#responsive-buttons').removeClass('btn-group-vertical');
   }
+  $('.carousel-box').height(getMaxHeight('.carousel-box'));
 });
 
 function scrollToAnchor(aid, callback) {
@@ -45,34 +46,33 @@ $(window).on('scroll', function() {
     }
 });
 
+function getMaxHeight(value) {
+  let max = 0;
+  $(value).each(function() {
+    if($(value).height() > max) {
+      max = $(value).height();
+    }
+  })
+  return max;
+}
+
 function reveal(id) {
   $('#explanations').children().hide();
   $('#selling-points').removeClass('total');
   $('#selling-points').addClass('start');
   $('#' + id).fadeIn('slow', function() {
-  scrollToAnchor(id);
+    scrollToAnchor(id);
   });
+  if(id == 'painting-with-words') {
+    //alert(getMaxHeight('.carousel-box'));
+    $('.carousel-box').css('min-height', getMaxHeight('.carousel-box'));
+  }
 }
 
 function revealDone(id) {
   $('#selling-points').removeClass('start');
   $('#selling-points').addClass('total');
   scrollToAnchor('selling-points', function() {
-  $('#' + id).fadeOut('slow');
+    $('#' + id).fadeOut('slow');
   });
 }
-
-function getMaxHeight(sel) {
-    max = 0;
-    $(sel).each(function(){
-        c_height = parseInt($(this).height());
-        if (c_height > max) {
-            max = c_height;
-        }
-    });
-    return max;
-}
-
-$(window).on('load resize orientationchange', function() {
-  $('.carousel-box').height(getMaxHeight('.carousel-box'));
-});
