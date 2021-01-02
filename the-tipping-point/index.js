@@ -60,12 +60,19 @@ function reveal(id) {
   $('#explanations').children().hide();
   $('#selling-points').removeClass('total');
   $('#selling-points').addClass('start');
+  if(id == 'painting-with-words') {
+    $('.carousel-box').css('min-height', getMaxHeight('.carousel-box'));
+    $('.carousel').carousel(1);
+    $('.carousel').carousel({
+      interval: 3000
+    });
+  }
   $('#' + id).fadeIn('slow', function() {
     scrollToAnchor(id);
   });
   if(id == 'painting-with-words') {
-    //alert(getMaxHeight('.carousel-box'));
     $('.carousel-box').css('min-height', getMaxHeight('.carousel-box'));
+    $('.carousel').carousel(1);
   }
 }
 
