@@ -16,7 +16,6 @@ $(window).resize(function() {
     $('#responsive-buttons').addClass('row');
     $('#responsive-buttons').removeClass('btn-group-vertical');
   }
-  $('.carousel-box').height(getMaxHeight('.carousel-box'));
 });
 
 function scrollToAnchor(aid, callback) {
