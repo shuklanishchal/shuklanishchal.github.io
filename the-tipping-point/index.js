@@ -70,10 +70,6 @@ function reveal(id) {
   $('#' + id).fadeIn('slow', function() {
     scrollToAnchor(id);
   });
-  if(id == 'painting-with-words') {
-    $('.carousel-box').css('min-height', getMaxHeight('.carousel-box'));
-    $('.carousel').carousel(1);
-  }
 }
 
 function revealDone(id) {
