@@ -1,20 +1,24 @@
 $(document).ready(function() {
-  if($(window).width() < 766) {
+  if($(window).width() < 1025) {
     $('#responsive-buttons').addClass('btn-group-vertical');
+    $('.mobile').removeClass('container');
   }
   else {
     $('#responsive-buttons').addClass('row');
+    $('.mobile').addClass('container');
   }
 });
 
 $(window).resize(function() {
-  if($(window).width() < 766) {
+  if($(window).width() < 1025) {
     $('#responsive-buttons').addClass('btn-group-vertical');
     $('#responsive-buttons').removeClass('row');
+    $('.mobile').removeClass('container');
   }
   else {
     $('#responsive-buttons').addClass('row');
     $('#responsive-buttons').removeClass('btn-group-vertical');
+    $('.mobile').addClass('container');
   }
 });
 
@@ -59,16 +63,17 @@ function reveal(id) {
   $('#explanations').children().hide();
   $('#selling-points').removeClass('total');
   $('#selling-points').addClass('start');
-  if(id == 'painting-with-words') {
+  $('#' + id).fadeIn('slow', function() {
+    scrollToAnchor(id);
+  });
+  if(id === "painting-with-words") {
+    $('.carousel').carousel(0);
     $('.carousel-box').css('min-height', getMaxHeight('.carousel-box'));
     $('.carousel').carousel(1);
     $('.carousel').carousel({
       interval: 3000
     });
   }
-  $('#' + id).fadeIn('slow', function() {
-    scrollToAnchor(id);
-  });
 }
 
 function revealDone(id) {

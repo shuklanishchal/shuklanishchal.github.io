@@ -103,6 +103,7 @@ body {
 }
 
 #malcolm-gladwell {
+  margin-top: 10px;
   margin-bottom: 20px;
 }
 
@@ -140,7 +141,7 @@ body {
   }
 }
 
-@media screen and (max-width: 992px) {
+@media screen and (max-width: 1025px) {
   body {
     font-size: 1.1em;
   }
@@ -157,6 +158,6 @@ body {
   }
 
   .carousel-box {
-    margin: 0px 30px;
+    margin: 0;
   }
 }
