@@ -22,6 +22,12 @@ $(window).resize(function() {
   }
 });
 
+$(window).on('touchstart', function() {
+  $('#desktop').css('display', 'none');
+  $('#swipe').css('display', '');
+  $(window).off('touchstart');
+})
+
 function scrollToAnchor(aid, callback) {
   var divTag = $('div[id="' + aid + '"]');
   $('html, body').animate({scrollTop: (divTag.offset().top - 50)}, 1000);

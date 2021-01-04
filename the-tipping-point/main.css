@@ -8,6 +8,20 @@ body {
   font-size: 23px;
 }
 
+sup {
+  text-decoration: underline #000 dotted;
+}
+
+a[target="_blank"]::after {
+  content: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAQElEQVR42qXKwQkAIAxDUUdxtO6/RBQkQZvSi8I/pL4BoGw/XPkh4XigPmsUgh0626AjRsgxHTkUThsG2T/sIlzdTsp52kSS1wAAAABJRU5ErkJggg==);
+  margin: 0 3px 0 5px;
+}
+
+a[target="_blank"] {
+  color: black;
+  text-decoration: underline #000 dotted;
+}
+
 .jumbotron {
   background: transparent;
   font-family: 'Montserrat', sans-serif;
@@ -90,6 +104,10 @@ body {
   font-size: 1.3em;
 }
 
+.footer-font {
+  font-size: 0.7em;
+}
+
 .start {
   border-radius: 15px 15px 0 0;
 }
@@ -138,6 +156,10 @@ body {
     overflow: hidden;
     transition: .5s;
     cursor: pointer;
+  }
+
+  a[target="_blank"]:hover {
+    text-decoration: underline;
   }
 }
 
