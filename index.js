@@ -2,6 +2,7 @@ function scrollToAnchor(aid) {
   var divTag = $('div[id="' + aid + '"]');
   $('html, body').animate({scrollTop: divTag.offset().top}, 1000);
 }
+
 window.onload = function() {
   $('#noScriptDisplay').css('display', 'inline');
   $('#bottom').css('opacity', '0');
@@ -14,38 +15,24 @@ window.onload = function() {
   document.getElementById('sig').src = "signature.gif";
   setTimeout(function(){ document.getElementById('sig').src = "signature_static.png"; $('#linkedin').animate({opacity: 1}); $('#github').animate({opacity: 1}); $('#bottom').animate({opacity: 1});}, 2290);
 }
-function home() {
+
+function goTo(id) {
   if($(window).width() < 992) {
     $('#toggler').click();
   }
-  scrollToAnchor('home');
+  scrollToAnchor(id);
 }
-function about() {
-  if($(window).width() < 992) {
-    $('#toggler').click();
-  }
-  scrollToAnchor('about');
-}
-function portfolio() {
-  if($(window).width() < 992) {
-    $('#toggler').click();
-  }
-  scrollToAnchor('portfolio');
-}
-function contact() {
-  if($(window).width() < 992) {
-    $('#toggler').click();
-  }
-  scrollToAnchor('contact-header');
-}
+
 function checkSubmit(e) {
    if(e && e.keyCode == 13) {
       $('#submit').submit2();
    }
 }
+
 $(window).scroll(function() {
   $('.navbar').fadeIn();
 });
+
 $(document).ready(function(){
   $('#submit').click(function() {
     $('#submit').submit2();

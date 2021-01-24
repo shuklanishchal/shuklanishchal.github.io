@@ -56,16 +56,16 @@
         <div class="collapse navbar-collapse" id="collapsibleNavbar">
           <ul class="navbar-nav">
             <li class="nav-item">
-              <a class="nav-link" onclick='home()' href="#home">Home</a>
+              <a class="nav-link" onclick='goTo("home")' href="#home">Home</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" onclick='about()' href="#about">About</a>
+              <a class="nav-link" onclick='goTo("about")' href="#about">About</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" onclick='portfolio()' href="#portfolio">Portfolio</a>
+              <a class="nav-link" onclick='goTo("portfolio")' href="#portfolio">Portfolio</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" onclick='contact()' href="#contact">Contact</a>
+              <a class="nav-link" onclick='goTo("contact")' href="#contact">Contact</a>
             </li>
           </ul>
           <ul class='navbar-nav ml-auto'>
@@ -134,9 +134,9 @@
       <!-- End About Page -->
 
       <!-- Portfolio Page -->
-      <div class='text-center center-all-special page-special' id='portfolio'>
+      <div class='center-all-special page-special' id='portfolio'>
         <br/><br/><br/>
-        <div class='jumbotron'>
+        <div class='jumbotron text-center'>
           <h1 style='color: #45a29e;'>
             Portfolio
           </h1>
@@ -145,7 +145,7 @@
           <div class='row'>
 
             <!-- Education -->
-            <div class='col-md-4 project-image'>
+            <div class='text-center col-md-4 project-image'>
               <a data-toggle="modal" data-target="#education">
                 <div id='image1'>
                   Education
@@ -168,15 +168,30 @@
                           Kentwood High School
                         </div>
                         <div class='col-md-6'>
-                          This is where I currently am, as an 11th grader. I have taken a total of 6 AP classes, with AP World History in 9th grade, and AP Physics, AP Language and Composition, AP Calculus, AP US History, and AP Computer Science currently. I have also taken two Honors English classes in my 9th and 10th grade years, respectively. I have maintained a high 3.97 unweighted GPA, and I am currently in the process of co-founding a programming club. I am also a member of the math club. I also wrestled for the school wrestling team for my 9th and 10th grade years.
+                          <p>I am currently an 11th grade student at this school. Here's a quick rundown of what I've done so far:</p><br/>
+                          <ul>
+                            <li>6 AP Classes: World History, Physics, Language and Composition, Calculus AB, US History, Computer Science</li><br/>
+                            <li>2 College Classes: Chemistry and Pre-Calculus</li><br/>
+                            <li>3.97 Cumulative Unweighted GPA</li><br/>
+                            <li>President of Math Club, Vice-President of Programming Club</li><br/>
+                            <li>After-School Tutor of AP Computer Science Students</li><br/>
+                            <li>Wrestled in 9th and 10th grade, Participated in Judo in 10th Grade</li>
+                          </ul>
                         </div>
-                      </div><br/><hr class='hr'/><br/>
+                      </div><br/><div class='hr'></div><br/>
                       <div class='row'>
                         <div class='col-sm-6 pad-bottom'>
                           Meridian Middle School
                         </div>
                         <div class='col-sm-6'>
-                          I attended this school in my 7th and 8th grade years. I took Honors Social Studies and Honors English both of these years. I received the Kent Rotary Student of the Month award during this time, and the President's Award as well. For both of these years, I maintained a 4.0 GPA, and participated in Game Club. I also helped mentor struggling math students after school in 8th grade. I also played football and wrestled for both of these years.
+                          <p>I attended this school in my 7th and 8th grade years. Here's what I did in those years:</p><br/>
+                          <ul>
+                            <li>Honors Social Studies and Honors English Both Years</li><br/>
+                            <li>Received Kent Rotary Student of the Month Award and President's Award</li><br/>
+                            <li>4.0 GPA</li><br/>
+                            <li>After-School Math Mentor for Students</li><br/>
+                            <li>Wrestled and Played Football Both Years</li>
+                          </ul>
                         </div>
                       </div>
                     </div>
@@ -190,7 +205,7 @@
             <!-- End Education -->
 
             <!-- Projects -->
-            <div class='col-md-4 project-image'>
+            <div class='text-center col-md-4 project-image'>
               <a data-toggle="modal" data-target="#projects">
                 <div id='image2'>
                   Projects
@@ -215,13 +230,13 @@
                         <div class='col-md-6'>
                           This was the first website I made in collaboration with another person. I used the same simple Bootstrap techniques I employed in my previous project and developed, with my friend, a site that created math worksheets for teachers. This is where my friend and I used a combination of PHP and JavaScript to create worksheet generators, using HTML, CSS, and the Bootstrap library to present it in website form. It's now an open source project <a target='_blank' rel="noopener noreferrer" href='https://github.com/nsdrozario/math-worksheet-generator'>on this GitHub page (Opens New Tab)</a>.
                         </div>
-                      </div><br/><hr class='hr'/><br/>
+                      </div><br/><div class='hr'></div><br/>
                       <div class='row'>
                         <div class='col-sm-6 pad-bottom'>
                           Calculators
                         </div>
                         <div class='col-sm-6'>
-                          In around my 8th grade year, I built a website which calculated the surface area and volume of various 3d shapes. This was around the time I started learning about Bootstrap and using a fraction of its CSS library. The site used to be static, but in the middle of 9th grade, I made it dynamic with the use of React.JS and ReactDOM. The website can be found <a target='_blank' rel="noopener noreferrer" href='https://shuklanishchal.github.io/calculator'>here (Opens New Tab)</a>.
+                          In around my 8th grade year, I built a website which calculated the surface area and volume of various 3D shapes. This was around the time I started learning about Bootstrap and using a fraction of its CSS library. The site used to be static, but in the middle of 9th grade, I made it dynamic with the use of React.JS and ReactDOM. The website can be found <a target='_blank' rel="noopener noreferrer" href='https://shuklanishchal.github.io/calculator'>here (Opens New Tab)</a>.
                         </div>
                       </div>
                     </div>
@@ -235,7 +250,7 @@
             <!-- End Projects -->
 
             <!-- Hobbies -->
-            <div class='col-md-4 project-image'>
+            <div class='text-center col-md-4 project-image'>
               <a data-toggle="modal" data-target="#hobbies">
                 <div id='image3'>
                   Hobbies
@@ -260,7 +275,7 @@
                         <div class='col-md-6'>
                           Ever since I picked up a flute in 5th grade, I have had a passion for music. I started getting into orchestral soundtracks as well. By 7th grade, I liked orchestral soundtracks more than other music, and by 8th grade, I started honing in on music from my favorite video game series <i>Assassin's Creed</i>. By 9th grade, I started making my own remixes of these soundtracks, which is what I do even now. I still play the flute, being an active member of the wind ensemble at my   school.
                         </div>
-                      </div><br/><hr class='hr'/><br/>
+                      </div><br/><div class='hr'></div><br/>
                       <div class='row'>
                         <div class='col-sm-6 pad-bottom'>
                           Mathematics
@@ -268,7 +283,7 @@
                         <div class='col-sm-6'>
                           I started taking math classes at a tutoring class at the age of 6 as well. I started learning advanced math very fast. I got to calculus by 7th grade, which is when I stopped going there. However, I still learn math on my own through self learning and scouring the Internet.
                         </div>
-                      </div><br/><hr class='hr'/><br/>
+                      </div><br/><div class='hr'></div><br/>
                       <div class='row'>
                         <div class='col-sm-6 pad-bottom'>
                           Martial Arts
