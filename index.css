@@ -33,6 +33,10 @@ head, body {
   background-color: #1f2833;
 }
 
+body {
+  overflow-y: hidden;
+}
+
 .navbar-nav a {
   color: #45a29e;
 }

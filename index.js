@@ -31,6 +31,7 @@ function checkSubmit(e) {
 
 $(window).scroll(function() {
   $('.navbar').fadeIn();
+  $('body').css('overflow-y', 'visible');
 });
 
 $(document).ready(function(){
