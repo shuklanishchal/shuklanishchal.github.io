@@ -1,6 +1,22 @@
 *:focus {
   outline: none;
 }
+* {
+  scrollbar-width: auto;
+  scrollbar-color: #45a29e transparent;
+}
+
+*::-webkit-scrollbar {
+  width: 12px;
+}
+
+*::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: #45a29e;
+}
 
 #noScriptDisplay {
   display: none;
